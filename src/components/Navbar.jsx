@@ -19,7 +19,7 @@ export default function NavbarLayout({ children }) {
                 <div className="flex items-center gap-2">
                     <Link to="/">
                         <img
-                            src="/logo1.png"
+                            src="/logo2.png"
                             alt="Logo"
                             className="h-14 cursor-pointer"
                             draggable="false"
@@ -89,5 +89,6 @@ export default function NavbarLayout({ children }) {
         </div>
     );
 }
+
 
 
