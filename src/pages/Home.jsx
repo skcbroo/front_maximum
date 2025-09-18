@@ -257,30 +257,31 @@ export default function Home() {
 
 function CardHome({ titulo, texto }) {
   return (
-    <div className="bg-[#EBF4FF] border border-[#CBD5E1] rounded-xl px-6 py-5 shadow-md text-[#2D3748]">
-      <h4 className="text-lg font-bold text-[#1A202C] mb-1">{titulo}</h4>
-      <p className="text-sm text-[#4A5568]">{texto}</p>
+    <div className="bg-[#44505F] border border-[#CBD5E1] rounded-xl px-6 py-5 shadow-md text-white">
+      <h4 className="text-lg font-bold text-white mb-1">{titulo}</h4>
+      <p className="text-sm text-gray-200">{texto}</p>
     </div>
   );
 }
 
 function StepHome({ numero, titulo, texto }) {
   return (
-    <div className="bg-[#EBF4FF] border border-[#CBD5E1] rounded-xl px-6 py-5 shadow-md text-[#2D3748]">
-      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-200 text-blue-800 font-bold mb-2">
+    <div className="bg-[#44505F] border border-[#CBD5E1] rounded-xl px-6 py-5 shadow-md text-white">
+      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white text-[#44505F] font-bold mb-2">
         {numero}
       </div>
-      <h4 className="text-lg font-bold text-[#1A202C] mb-1">{titulo}</h4>
-      <p className="text-sm text-[#4A5568]">{texto}</p>
+      <h4 className="text-lg font-bold text-white mb-1">{titulo}</h4>
+      <p className="text-sm text-gray-200">{texto}</p>
     </div>
   );
 }
 
 function FaqHome({ q, a }) {
   return (
-    <div className="bg-[#EBF4FF] border border-[#CBD5E1] rounded-xl px-6 py-5 shadow-md">
-      <p className="font-semibold text-[#1A202C]">{q}</p>
-      <p className="text-sm text-[#4A5568] mt-1">{a}</p>
+    <div className="bg-[#44505F] border border-[#CBD5E1] rounded-xl px-6 py-5 shadow-md text-white">
+      <p className="font-semibold text-white">{q}</p>
+      <p className="text-sm text-gray-200 mt-1">{a}</p>
     </div>
   );
 }
+
