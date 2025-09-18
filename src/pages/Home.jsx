@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
-import NavbarLayout from "../components/Navbar";
-import GraficoGeral from "../components/GraficoGeral";
-import GraficoGeralPercentual from "../components/GraficoGeralPercentual";
+const React = require("react");
+const { Link } = require("react-router-dom");
+const NavbarLayout = require("../components/Navbar");
+const GraficoGeral = require("../components/GraficoGeral");
+const GraficoGeralPercentual = require("../components/GraficoGeralPercentual");
 
 // === Configuração do endereço para o mapa ===
-const ENDERECO = "St. de Habitações Individuais Sul QI 19 casa 19 - Lago Sul, Brasília - DF, 71655-040";
+const ENDERECO =
+  "St. de Habitações Individuais Sul QI 19 casa 19 - Lago Sul, Brasília - DF, 71655-040";
 
 function MapEmbed({ lat, lng, address }) {
   const hasCoords = typeof lat === "number" && typeof lng === "number";
@@ -15,11 +17,13 @@ function MapEmbed({ lat, lng, address }) {
   const iframeSrc = `https://www.google.com/maps?q=${query}&z=15&output=embed`;
   const directionsHref = hasCoords
     ? `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
-    : `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
+    : `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+        address
+      )}`;
 
   return (
     <div className="space-y-2">
-      <div className="w-full h-64 rounded-lg overflow-hidden border border-[#CBD5E1]">
+      <div className="w-full h-64 rounded-lg overflow-hidden border border-teal-200">
         <iframe
           title="Localização"
           src={iframeSrc}
@@ -34,7 +38,7 @@ function MapEmbed({ lat, lng, address }) {
         href={directionsHref}
         target="_blank"
         rel="noreferrer"
-        className="inline-block text-sm underline text-[#2B6CB0] hover:text-[#1A4E86]"
+        className="inline-block text-sm underline text-teal-600 hover:text-teal-700"
       >
         Ver rota no Google Maps
       </a>
@@ -42,7 +46,37 @@ function MapEmbed({ lat, lng, address }) {
   );
 }
 
-export default function Home() {
+function CardHome({ titulo, texto }) {
+  return (
+    <div className="bg-gradient-to-br from-teal-600 to-cyan-600 border border-teal-300 rounded-xl px-6 py-5 shadow-lg text-white hover:shadow-xl transition-shadow">
+      <h4 className="text-lg font-bold text-white mb-1">{titulo}</h4>
+      <p className="text-sm text-teal-50">{texto}</p>
+    </div>
+  );
+}
+
+function StepHome({ numero, titulo, texto }) {
+  return (
+    <div className="bg-gradient-to-br from-teal-600 to-cyan-600 border border-teal-300 rounded-xl px-6 py-5 shadow-lg text-white hover:shadow-xl transition-shadow">
+      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white text-teal-600 font-bold mb-2">
+        {numero}
+      </div>
+      <h4 className="text-lg font-bold text-white mb-1">{titulo}</h4>
+      <p className="text-sm text-teal-50">{texto}</p>
+    </div>
+  );
+}
+
+function FaqHome({ q, a }) {
+  return (
+    <div className="bg-gradient-to-br from-teal-600 to-cyan-600 border border-teal-300 rounded-xl px-6 py-5 shadow-lg text-white hover:shadow-xl transition-shadow">
+      <p className="font-semibold text-white">{q}</p>
+      <p className="text-sm text-teal-50 mt-1">{a}</p>
+    </div>
+  );
+}
+
+function Home() {
   const falarComEquipe = () => {
     const numeroEmpresa = "5561996204646";
     const mensagem = encodeURIComponent(
@@ -54,20 +88,22 @@ export default function Home() {
 
   return (
     <NavbarLayout>
-      <h1 className="sr-only">Midlej Capital — Plataforma de Créditos Judiciais</h1>
+      <h1 className="sr-only">
+        Midlej Capital — Plataforma de Créditos Judiciais
+      </h1>
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto mb-8">
-        <div className="rounded-xl bg-[#EBF4FF] border border-[#CBD5E1] px-6 py-8 shadow-md">
+        <div className="rounded-xl bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200 px-6 py-8 shadow-md">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div>
-              <p className="text-sm font-medium text-gray-500 uppercase tracking-wide select-none cursor-default">
+              <p className="text-sm font-medium text-teal-600 uppercase tracking-wide select-none cursor-default">
                 Soluções em créditos judiciais
               </p>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1A202C] mt-1">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mt-1">
                 Investimento seguro, acompanhamento transparente
               </h2>
-              <p className="text-[#4A5568] mt-3 select-none cursor-default">
+              <p className="text-gray-600 mt-3 select-none cursor-default">
                 Conectamos oportunidades de créditos judiciais a investidores,
                 com curadoria, informações claras e um painel simples para
                 acompanhar cada etapa até o recebimento.
@@ -76,13 +112,13 @@ export default function Home() {
               <div className="mt-5 flex flex-wrap gap-3">
                 <a
                   href="/creditos"
-                  className="inline-block bg-[#2B6CB0] text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90 transition"
+                  className="inline-block bg-teal-600 text-white font-semibold rounded-lg px-5 py-2 hover:bg-teal-700 transition-colors"
                 >
                   Ver créditos disponíveis
                 </a>
                 <button
                   onClick={falarComEquipe}
-                  className="inline-block bg-white text-[#2B6CB0] border border-[#CBD5E1] font-semibold rounded-lg px-5 py-2 hover:bg-[#F7FAFC] transition"
+                  className="inline-block bg-white text-teal-600 border border-teal-200 font-semibold rounded-lg px-5 py-2 hover:bg-teal-50 transition-colors"
                 >
                   Fale com a equipe
                 </button>
@@ -93,7 +129,7 @@ export default function Home() {
               <img
                 src="/buss.jpg"
                 alt="Reunião de negócios"
-                className="w-48 md:w-72 lg:w-96 rounded-lg object-cover select-none"
+                className="w-48 md:w-72 lg:w-96 rounded-lg object-cover select-none shadow-lg"
                 draggable="false"
               />
             </div>
@@ -103,7 +139,7 @@ export default function Home() {
 
       {/* DIFERENCIAIS */}
       <section className="max-w-6xl mx-auto mb-8">
-        <h3 className="text-xl font-bold text-center mb-4 select-none cursor-default">
+        <h3 className="text-xl font-bold text-center mb-4 text-gray-800 select-none cursor-default">
           Por que escolher a Midlej Capital?
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -124,7 +160,7 @@ export default function Home() {
 
       {/* COMO FUNCIONA */}
       <section className="max-w-6xl mx-auto mb-8">
-        <h3 className="text-xl font-bold text-center mb-4 select-none cursor-default">
+        <h3 className="text-xl font-bold text-center mb-4 text-gray-800 select-none cursor-default">
           Como funciona
         </h3>
 
@@ -149,24 +185,24 @@ export default function Home() {
 
       {/* CHAMADA PARA AÇÃO */}
       <section className="max-w-6xl mx-auto mb-8">
-        <div className="rounded-xl bg-[#EBF4FF] border border-[#CBD5E1] px-6 py-6 shadow-md text-center">
-          <h3 className="text-lg md:text-xl font-bold text-[#1A202C]">
+        <div className="rounded-xl bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200 px-6 py-6 shadow-md text-center">
+          <h3 className="text-lg md:text-xl font-bold text-gray-800">
             Pronto para conhecer as oportunidades?
           </h3>
-          <p className="text-[#4A5568] mt-1 select-none cursor-default">
+          <p className="text-gray-600 mt-1 select-none cursor-default">
             Explore a lista de créditos ou fale com nosso time para saber mais.
           </p>
 
           <div className="mt-4 flex gap-3 justify-center">
             <a
               href="/creditos"
-              className="inline-block bg-[#2B6CB0] text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90 transition"
+              className="inline-block bg-teal-600 text-white font-semibold rounded-lg px-5 py-2 hover:bg-teal-700 transition-colors"
             >
               Acessar créditos
             </a>
             <button
               onClick={falarComEquipe}
-              className="inline-block bg-white text-[#2B6CB0] border border-[#CBD5E1] font-semibold rounded-lg px-5 py-2 hover:bg-[#F7FAFC] transition"
+              className="inline-block bg-white text-teal-600 border border-teal-200 font-semibold rounded-lg px-5 py-2 hover:bg-teal-50 transition-colors"
             >
               Entrar em contato
             </button>
@@ -176,7 +212,7 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="max-w-6xl mx-auto mb-10">
-        <h3 className="text-xl font-bold text-center mb-4 select-none cursor-default">
+        <h3 className="text-xl font-bold text-center mb-4 text-gray-800 select-none cursor-default">
           Perguntas frequentes
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -199,89 +235,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* GRÁFICO DE RETORNO AGREGADO */}
-
-      
       {/* LOCALIZAÇÃO */}
       <section className="max-w-6xl mx-auto mb-8">
-        <h3 className="text-xl font-bold text-center mb-4 select-none cursor-default">
+        <h3 className="text-xl font-bold text-center mb-4 text-gray-800 select-none cursor-default">
           Onde estamos
         </h3>
 
-        <div className="rounded-xl bg-[#EBF4FF] border border-[#CBD5E1] px-6 py-6 shadow-md text-[#2D3748]">
+        <div className="rounded-xl bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200 px-6 py-6 shadow-md text-gray-700">
           <p className="text-sm mb-3">
-            <span className="font-semibold">Endereço: </span>{ENDERECO}
+            <span className="font-semibold">Endereço: </span>
+            {ENDERECO}
           </p>
           <MapEmbed lat={-15.860222} lng={-47.862396} />
         </div>
       </section>
-
-      {/* FOOTER */}
-      <footer className="bg-transparent text-sm mt-12">
-        <div className="max-w-6xl mx-auto px-6 py-8 space-y-6 text-sm text-[#1A202C]">
-          <p>
-            A MIDLEJ Capital detém uma plataforma digital que atua como correspondente bancário para facilitar
-            o processo de contratação de empréstimos. A MIDLEJ Capital não é instituição financeira e não
-            fornece crédito ao mercado. A MIDLEJ Capital atua como correspondente bancário, seguimos as
-            diretrizes da Resolução CMN Nº 4.935 do Banco Central do Brasil. A taxa de juros praticada no
-            produto de crédito pessoal pode variar de 15,80% a 17,90% a.m. (481,44% a 621,38% a.a.). Nossa
-            empresa tem o compromisso de total transparência com nossos clientes. Antes de iniciar o
-            preenchimento de uma proposta, será exibido de forma clara: a taxa de juros utilizada, tarifas
-            aplicáveis, impostos (IOF) e o custo efetivo total (CET).
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-center md:text-left">
-            <div className="flex flex-col items-center md:items-center">
-              <h4 className="text-lg font-bold text-[#1A202C]">MIDLEJ CAPITAL</h4>
-              <p className="mt-2">© 2023 by Midlej Technology.</p>
-              <p className="mt-2">CNPJ:35.340.252/0001-44</p>
-            </div>
-
-            <div className="flex flex-col items-center md:items-center">
-              <p>
-                <span className="font-semibold">Endereço:</span> {ENDERECO}
-              </p>
-              <p>
-                <span className="font-semibold">Email:</span> contato@midlejcapital.com.br
-              </p>
-              <p>
-                <span className="font-semibold">Telefone:</span> 61 99620-4646
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </NavbarLayout>
   );
 }
 
-function CardHome({ titulo, texto }) {
-  return (
-    <div className="bg-[#44505F] border border-[#CBD5E1] rounded-xl px-6 py-5 shadow-md text-white">
-      <h4 className="text-lg font-bold text-white mb-1">{titulo}</h4>
-      <p className="text-sm text-gray-200">{texto}</p>
-    </div>
-  );
-}
-
-function StepHome({ numero, titulo, texto }) {
-  return (
-    <div className="bg-[#44505F] border border-[#CBD5E1] rounded-xl px-6 py-5 shadow-md text-white">
-      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white text-[#44505F] font-bold mb-2">
-        {numero}
-      </div>
-      <h4 className="text-lg font-bold text-white mb-1">{titulo}</h4>
-      <p className="text-sm text-gray-200">{texto}</p>
-    </div>
-  );
-}
-
-function FaqHome({ q, a }) {
-  return (
-    <div className="bg-[#44505F] border border-[#CBD5E1] rounded-xl px-6 py-5 shadow-md text-white">
-      <p className="font-semibold text-white">{q}</p>
-      <p className="text-sm text-gray-200 mt-1">{a}</p>
-    </div>
-  );
-}
-
+module.exports = Home;
