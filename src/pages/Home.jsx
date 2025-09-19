@@ -226,9 +226,9 @@ export default function Home() {
       </NavbarLayout>
 
       {/* FOOTER full-width */}
-      <section className="-mx-10">
+     <section>
   <footer className="w-full bg-[#0AAFC0] text-white">
-    <div className="w-full px-6 md:px-12 lg:px-20 py-10 space-y-6">
+    <div className="w-full px-6 py-8 space-y-6">
       <p className="leading-relaxed">
         A Maximum Profits detém uma plataforma digital que atua como
         correspondente bancário para facilitar o processo de contratação de
@@ -262,6 +262,7 @@ export default function Home() {
     </div>
   </footer>
 </section>
+
 
     </>
   );
