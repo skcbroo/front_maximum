@@ -82,7 +82,7 @@ export default function Home() {
                                         href="/creditos"
                                         className="inline-block bg-[#0AAFC0] text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90 transition"
                                     >
-                                        Ver aplicações disponíveis
+                                        Aplicações disponíveis
                                     </a>
                                     <button
                                         onClick={falarComEquipe}
