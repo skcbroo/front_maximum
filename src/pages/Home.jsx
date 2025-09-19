@@ -225,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-transparent text-sm mt-12">
+      <footer className="bg-[#0AAFC0] text-sm mt-12">
         <div className="max-w-6xl mx-auto px-6 py-8 space-y-6 text-sm text-[#1A202C]">
           <p>
             A Maximum Profits detém uma plataforma digital que atua como
