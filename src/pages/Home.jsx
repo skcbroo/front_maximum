@@ -78,13 +78,13 @@ export default function Home() {
               <div className="mt-5 flex flex-wrap gap-3">
                 <a
                   href="/creditos"
-                  className="inline-block bg-[#2B6CB0] text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90 transition"
+                  className="inline-block bg-[#009688] text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90 transition"
                 >
                   Ver créditos disponíveis
                 </a>
                 <button
                   onClick={falarComEquipe}
-                  className="inline-block bg-white text-[#2B6CB0] border border-[#CBD5E1] font-semibold rounded-lg px-5 py-2 hover:bg-[#F7FAFC] transition"
+                  className="inline-block bg-white text-[#2B6CB0] border border-[#009688] font-semibold rounded-lg px-5 py-2 hover:bg-[#F7FAFC] transition"
                 >
                   Fale com a equipe
                 </button>
