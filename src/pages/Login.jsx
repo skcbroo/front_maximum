@@ -48,10 +48,10 @@ export default function Login() {
       <h1 className="sr-only">Maximum Profits — Plataforma de Créditos Judiciais</h1>
 
       {/* tela inteira com o card centralizado */}
-      <div className="min-h-screen w-full flex items-center justify-center bg-[#2F4755] px-4">
+      <div className="min-h-screen w-full flex items-center justify-center bg-transparent px-4">
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-md bg-white/90 backdrop-blur-xl text-gray-800 rounded-2xl shadow-2xl border border-white/40 px-8 py-10"
+          className="w-full max-w-md bg-C6CDD1 backdrop-blur-xl text-gray-800 rounded-2xl shadow-2xl border border-white/40 px-8 py-10"
           aria-labelledby="titulo-login"
         >
           {/* logo opcional no topo do card */}
@@ -164,6 +164,7 @@ export default function Login() {
     </NavbarLayout>
   );
 }
+
 
 
 
