@@ -72,7 +72,7 @@ export default function Home() {
               </h2>
               <p className="text-[#4A5568] mt-3 select-none">
                 Oferecemos oportunidades de investimento em ativos que geram renda mensal, 
-                informações claras e um painel simples para acompanhar os rendimentos
+                informações claras e um painel simples para acompanhar os rendimentos.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-3">
@@ -80,7 +80,7 @@ export default function Home() {
                   href="/creditos"
                   className="inline-block bg-[#0AAFC0] text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90 transition"
                 >
-                  Ver créditos disponíveis
+                  Ver aplicações disponíveis
                 </a>
                 <button
                   onClick={falarComEquipe}
@@ -168,7 +168,7 @@ export default function Home() {
           href="/creditos"
           className="bg-white text-[#0AAFC0] font-semibold rounded-lg px-6 py-3 shadow hover:opacity-90 transition"
         >
-          Acessar Créditos
+          Acessar Aplicações
         </a>
         <button
           onClick={falarComEquipe}
