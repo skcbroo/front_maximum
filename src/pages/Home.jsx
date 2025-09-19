@@ -45,7 +45,7 @@ function MapEmbed({ lat, lng, address }) {
 
 export default function Home() {
   const falarComEquipe = () => {
-    const numeroEmpresa = "5561996204646";
+    const numeroEmpresa = "5561935058737";
     const mensagem = encodeURIComponent(
       "Olá, gostaria de falar com a equipe da Maximum Profits para saber mais sobre as oportunidades de crédito."
     );
