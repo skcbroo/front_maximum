@@ -227,48 +227,42 @@ export default function Home() {
 
       {/* FOOTER full-width */}
       <section className="-mx-10">
-        <footer className="w-full bg-[#0AAFC0] text-white">
-          <div className="w-full px-10 py-8 space-y-6">
-            <p>
-              A Maximum Profits detém uma plataforma digital que atua como
-              correspondente bancário para facilitar o processo de contratação
-              de empréstimos. A Maximum Profits não é instituição financeira e
-              não fornece crédito ao mercado. Atuamos como correspondente
-              bancário conforme a Resolução CMN Nº 4.935 do Banco Central do
-              Brasil.
-            </p>
+  <footer className="w-full bg-[#0AAFC0] text-white">
+    <div className="w-full px-6 md:px-12 lg:px-20 py-10 space-y-6">
+      <p className="leading-relaxed">
+        A Maximum Profits detém uma plataforma digital que atua como
+        correspondente bancário para facilitar o processo de contratação de
+        empréstimos. A Maximum Profits não é instituição financeira e não
+        fornece crédito ao mercado. Atuamos como correspondente bancário
+        conforme a Resolução CMN Nº 4.935 do Banco Central do Brasil.
+      </p>
 
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-start text-left">
-              <div>
-                <h4 className="text-lg font-bold">MAXIMUM PROFITS</h4>
-                <p className="mt-2">© 2025 by Maximum Technology.</p>
-                <p className="mt-2">CNPJ: 35.690.133/0001-11</p>
-              </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start text-left">
+        <div>
+          <h4 className="text-lg font-bold">MAXIMUM PROFITS</h4>
+          <p className="mt-2">© 2025 by Maximum Technology.</p>
+          <p className="mt-2">CNPJ: 35.690.133/0001-11</p>
+        </div>
 
-              <div>
-                <p className="flex">
-                  <span className="font-semibold inline-block w-28">
-                    Endereço:
-                  </span>
-                  <span>{ENDERECO}</span>
-                </p>
-                <p className="flex">
-                  <span className="font-semibold inline-block w-28">
-                    Email:
-                  </span>
-                  <span>contato@maximumprofits.com.br</span>
-                </p>
-                <p className="flex">
-                  <span className="font-semibold inline-block w-28">
-                    Telefone:
-                  </span>
-                  <span>61 93505-8737</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </section>
+        <div>
+          <p className="flex">
+            <span className="font-semibold inline-block w-28">Endereço:</span>
+            <span>{ENDERECO}</span>
+          </p>
+          <p className="flex">
+            <span className="font-semibold inline-block w-28">Email:</span>
+            <span>contato@maximumprofits.com.br</span>
+          </p>
+          <p className="flex">
+            <span className="font-semibold inline-block w-28">Telefone:</span>
+            <span>61 93505-8737</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
     </>
   );
 }
