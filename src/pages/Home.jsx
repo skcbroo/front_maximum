@@ -78,13 +78,13 @@ export default function Home() {
               <div className="mt-5 flex flex-wrap gap-3">
                 <a
                   href="/creditos"
-                  className="inline-block bg-[#009688] text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90 transition"
+                  className="inline-block bg-[#0AAFC0] text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90 transition"
                 >
                   Ver créditos disponíveis
                 </a>
                 <button
                   onClick={falarComEquipe}
-                  className="inline-block bg-white text-[#009688] border border-[#009688] font-semibold rounded-lg px-5 py-2 hover:bg-[#F7FAFC] transition"
+                  className="inline-block bg-white text-[#0AAFC0] border border-[#0AAFC0] font-semibold rounded-lg px-5 py-2 hover:bg-[#F7FAFC] transition"
                 >
                   Fale com a equipe
                 </button>
@@ -264,7 +264,7 @@ export default function Home() {
 function CardHome({ titulo, texto, icon }) {
   return (
     <div className="bg-white border border-[#E5E7EB] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
-      <div className="w-12 h-12 bg-[#009688] rounded-lg flex items-center justify-center mb-4">
+      <div className="w-12 h-12 bg-[#0AAFC0] rounded-lg flex items-center justify-center mb-4">
         {icon}
       </div>
       <h4 className="text-lg font-bold text-[#111827] mb-2">{titulo}</h4>
@@ -276,7 +276,7 @@ function CardHome({ titulo, texto, icon }) {
 function StepHome({ numero, titulo, texto }) {
   return (
     <div className="bg-white border border-[#E5E7EB] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
-      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#009688] text-white font-bold mb-2">
+      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#0AAFC0] text-white font-bold mb-2">
         {numero}
       </div>
       <h4 className="text-lg font-bold text-[#111827] mb-2">{titulo}</h4>
@@ -289,7 +289,7 @@ function FaqHome({ q, a }) {
   return (
     <div className="bg-white border border-[#E5E7EB] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
       <div className="flex items-start gap-3">
-        <div className="w-6 h-6 rounded-md bg-[#009688] flex items-center justify-center">
+        <div className="w-6 h-6 rounded-md bg-[#0AAFC0] flex items-center justify-center">
           <CheckCircle className="w-4 h-4 text-white" />
         </div>
         <div>
