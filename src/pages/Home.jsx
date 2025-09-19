@@ -287,7 +287,7 @@ function CardHome({ titulo, texto, icon }) {
 function StepHome({ numero, titulo, texto }) {
     return (
         <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-1 transition transform">
-            <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-[#0AAFC0] text-white flex items-center justify-center font-bold hover:shadow-lg hover:-translate-y-1 transition transform">
+            <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-[#0AAFC0] text-white flex items-center justify-center font-bold">
                 {numero}
             </div>
             <h4 className="font-bold text-lg text-center">{titulo}</h4>
