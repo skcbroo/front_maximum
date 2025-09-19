@@ -260,42 +260,44 @@ export default function Home() {
 
 /* ====== Cards ====== */
 
+/* ====== Cards ====== */
 function CardHome({ titulo, texto, icon }) {
   return (
-    <div className="bg-white border border-[#E2E8F0] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
-      <div className="w-12 h-12 bg-[#2B6CB0] rounded-lg flex items-center justify-center mb-4">
+    <div className="bg-white border border-[#E5E7EB] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
+      <div className="w-12 h-12 bg-[#009688] rounded-lg flex items-center justify-center mb-4">
         {icon}
       </div>
-      <h4 className="text-lg font-bold text-[#0F172A] mb-2">{titulo}</h4>
-      <p className="text-sm text-[#475569]">{texto}</p>
+      <h4 className="text-lg font-bold text-[#111827] mb-2">{titulo}</h4>
+      <p className="text-sm text-[#4B5563]">{texto}</p>
     </div>
   );
 }
 
 function StepHome({ numero, titulo, texto }) {
   return (
-    <div className="bg-white border border-[#E2E8F0] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
-      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#2B6CB0] text-white font-bold mb-2">
+    <div className="bg-white border border-[#E5E7EB] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
+      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#009688] text-white font-bold mb-2">
         {numero}
       </div>
-      <h4 className="text-lg font-bold text-[#0F172A] mb-2">{titulo}</h4>
-      <p className="text-sm text-[#475569]">{texto}</p>
+      <h4 className="text-lg font-bold text-[#111827] mb-2">{titulo}</h4>
+      <p className="text-sm text-[#4B5563]">{texto}</p>
     </div>
   );
 }
 
 function FaqHome({ q, a }) {
   return (
-    <div className="bg-white border border-[#E2E8F0] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
+    <div className="bg-white border border-[#E5E7EB] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
       <div className="flex items-start gap-3">
-        <div className="w-6 h-6 rounded-md bg-[#2B6CB0] flex items-center justify-center">
+        <div className="w-6 h-6 rounded-md bg-[#009688] flex items-center justify-center">
           <CheckCircle className="w-4 h-4 text-white" />
         </div>
         <div>
-          <p className="font-semibold text-[#0F172A]">{q}</p>
-          <p className="text-sm text-[#475569] mt-1">{a}</p>
+          <p className="font-semibold text-[#111827]">{q}</p>
+          <p className="text-sm text-[#4B5563] mt-1">{a}</p>
         </div>
       </div>
     </div>
   );
 }
+
