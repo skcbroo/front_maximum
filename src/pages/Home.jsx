@@ -269,7 +269,7 @@ function CardHome({ titulo, texto, icon }) {
 
 function StepHome({ numero, titulo, texto }) {
   return (
-    <div className="bg-white border border-[#E5EAF0] rounded-xl px-6 py-6 shadow-md">
+    <div className="bg-[#BDC1C6] rounded-xl px-6 py-6 shadow-md hover:shadow-lg transition">
       <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#EBF4FF] text-[#2B6CB0] font-bold mb-2">
         {numero}
       </div>
@@ -281,7 +281,7 @@ function StepHome({ numero, titulo, texto }) {
 
 function FaqHome({ q, a }) {
   return (
-    <div className="bg-white border border-[#E5EAF0] rounded-xl px-6 py-6 shadow-md">
+    <div className="bg-[#BDC1C6] rounded-xl px-6 py-6 shadow-md hover:shadow-lg transition">
       <div className="flex items-start gap-3">
         <div className="w-6 h-6 rounded-md bg-[#EBF4FF] flex items-center justify-center">
           <CheckCircle className="w-4 h-4 text-[#2B6CB0]" />
