@@ -225,9 +225,9 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#0AAFC0] text-sm mt-12">
-        <div className="max-w-6xl mx-auto px-6 py-8 space-y-6 text-sm text-[#1A202C]">
-          <p>
+      <footer className="bg-[#0AAFC0] text-sm mt-12 w-full">
+  <div className="px-6 py-8 space-y-6 text-sm text-[#1A202C]">
+    <p className="max-w-6xl mx-auto">
             A Maximum Profits detém uma plataforma digital que atua como
             correspondente bancário para facilitar o processo de contratação de
             empréstimos. A Maximum Profits não é instituição financeira e não
