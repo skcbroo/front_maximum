@@ -58,7 +58,7 @@ export default function Home() {
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto mb-8">
-        <div className="rounded-xl bg-[#EBF4FF] border border-[#CBD5E1] px-6 py-8 shadow-md">
+        <div className="rounded-xl bg-[#44505F] border border-[#CBD5E1] px-6 py-8 shadow-md">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div>
               <p className="text-sm font-medium text-gray-500 uppercase tracking-wide select-none cursor-default">
@@ -257,7 +257,7 @@ export default function Home() {
 
 function CardHome({ titulo, texto }) {
   return (
-    <div className="bg-[#44505F] border border-[#CBD5E1] rounded-xl px-6 py-5 shadow-md text-white">
+    <div className="bg-[#44505F] border rounded-xl px-6 py-5 shadow-md text-white">
       <h4 className="text-lg font-bold text-white mb-1">{titulo}</h4>
       <p className="text-sm text-gray-200">{texto}</p>
     </div>
