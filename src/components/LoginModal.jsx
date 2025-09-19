@@ -93,7 +93,7 @@ export default function LoginModal({ isOpen, onClose }) {
               />
               Lembrar-me
             </label>
-            <a href="/esqueci-senha" className="text-[#0AAFC0] hover:underline">
+            <a href="/" className="text-[#0AAFC0] hover:underline">
               Esqueci a senha
             </a>
           </div>
