@@ -1,8 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import LoginModal from "./LoginModal"; // 👈 importa o modal
 
 export default function NavbarLayout({ children }) {
   const role = localStorage.getItem("role");
   const navigate = useNavigate();
+  const [loginAberto, setLoginAberto] = useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem("role");
@@ -13,7 +16,7 @@ export default function NavbarLayout({ children }) {
   return (
     <div className="min-h-screen bg-[#F9FAFB] text-[#111827]">
       {/* Navbar */}
-<nav className="bg-[#2F4755]  text-white shadow-md px-6 py-3 flex items-center justify-between select-none">
+      <nav className="bg-[#2F4755] text-white shadow-md px-6 py-3 flex items-center justify-between select-none">
         {/* Logo clicável */}
         <div className="flex items-center gap-2">
           <Link to="/">
@@ -97,22 +100,21 @@ export default function NavbarLayout({ children }) {
               </button>
             </>
           ) : (
-            <Link
-              to="/login"
+            <button
+              onClick={() => setLoginAberto(true)} // 👈 abre o modal
               className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
             >
               Entrar
-            </Link>
+            </button>
           )}
         </div>
       </nav>
 
       {/* Conteúdo da página */}
       <div className="p-10 min-h-[calc(100vh-80px)]">{children}</div>
+
+      {/* Modal de Login */}
+      <LoginModal isOpen={loginAberto} onClose={() => setLoginAberto(false)} />
     </div>
   );
 }
-
-
-
-
