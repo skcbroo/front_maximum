@@ -225,7 +225,10 @@ export default function Home() {
         </div>
       </section>
 
-   <section className="-mx-10">
+  
+
+    </NavbarLayout>
+     <section className="-mx-10">
   <footer className="w-full bg-[#0AAFC0] text-white">
     <div className="max-w-6xl mx-auto px-6 py-8 space-y-6">
       <p>
@@ -261,10 +264,6 @@ export default function Home() {
     </div>
   </footer>
 </section>
-
-
-
-    </NavbarLayout>
   );
 }
 
