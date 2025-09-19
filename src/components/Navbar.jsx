@@ -13,7 +13,7 @@ export default function NavbarLayout({ children }) {
   return (
     <div className="min-h-screen bg-[#F9FAFB] text-[#111827]">
       {/* Navbar */}
-<nav className="bg-gradient-to-r from-white to-[#009688] text-white shadow-md px-6 py-3 flex items-center justify-between select-none">
+<nav className="bg-gradient-to-r from-[#009688] to-white text-black shadow-md px-6 py-3 flex items-center justify-between select-none">
         {/* Logo clicável */}
         <div className="flex items-center gap-2">
           <Link to="/">
@@ -112,4 +112,5 @@ export default function NavbarLayout({ children }) {
     </div>
   );
 }
+
 
