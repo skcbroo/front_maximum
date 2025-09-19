@@ -66,7 +66,7 @@ export default function Home() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                             <div>
                                 <p className="text-sm font-medium text-gray-500 uppercase tracking-wide select-none">
-                                    Soluções em créditos judiciais
+                                    Rentabilidade previsível com transparência
                                 </p>
                                 <h2 className="text-2xl md:text-3xl font-bold text-[#1A202C] mt-1">
                                     Investimento seguro, acompanhamento transparente
