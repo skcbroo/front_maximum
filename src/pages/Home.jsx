@@ -1,3 +1,4 @@
+
 import NavbarLayout from "../components/Navbar";
 import LoginModal from "../components/LoginModal"; // importa o modal
 import { Shield, TrendingUp, Users, CheckCircle } from "lucide-react";
@@ -261,7 +262,6 @@ export default function Home() {
   </footer>
 </section>
 
-</section>
 
     </NavbarLayout>
   );
