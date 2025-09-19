@@ -225,10 +225,10 @@ export default function Home() {
         </div>
       </section>
 
-     <section className="-mx-10">
+    <section className="-mx-10">
   <footer className="w-full bg-[#0AAFC0] text-white">
     <div className="w-full px-10 py-8 space-y-6">
-      <p>
+      <p className="text-sm leading-relaxed">
         A Maximum Profits detém uma plataforma digital que atua como
         correspondente bancário para facilitar o processo de contratação de
         empréstimos. A Maximum Profits não é instituição financeira e não
@@ -236,7 +236,7 @@ export default function Home() {
         conforme a Resolução CMN Nº 4.935 do Banco Central do Brasil.
       </p>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-start text-center md:text-left">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-start text-left">
         <div>
           <h4 className="text-lg font-bold">MAXIMUM PROFITS</h4>
           <p className="mt-2">© 2025 by Maximum Technology.</p>
@@ -261,7 +261,6 @@ export default function Home() {
     </div>
   </footer>
 </section>
-
 
     </NavbarLayout>
   );
