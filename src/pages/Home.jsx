@@ -185,7 +185,7 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="max-w-6xl mx-auto mb-10">
-        <h3 className="text-xl font-bold text-center mb-4 select-none">
+<h3 className="text-xl font-bold text-center mt-12 mb-6 select-none">
           Perguntas frequentes
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -239,7 +239,7 @@ export default function Home() {
               <h4 className="text-lg font-bold text-[#1A202C]">
                 MAXIMUM PROFITS
               </h4>
-              <p className="mt-2">© 2023 by Midlej Technology.</p>
+              <p className="mt-2">© 2023 by Maximum Technology.</p>
               <p className="mt-2">CNPJ: 35.340.252/0001-44</p>
             </div>
 
@@ -249,10 +249,10 @@ export default function Home() {
               </p>
               <p>
                 <span className="font-semibold">Email:</span>{" "}
-                contato@midlejcapital.com.br
+                contato@maximumprofits.com.br
               </p>
               <p>
-                <span className="font-semibold">Telefone:</span> 61 99620-4646
+                <span className="font-semibold">Telefone:</span>  61 93505-8737
               </p>
             </div>
           </div>
