@@ -1,4 +1,5 @@
 import NavbarLayout from "../components/Navbar";
+import LoginModal from "../components/LoginModal"; // importa o modal
 import { Shield, TrendingUp, Users, CheckCircle } from "lucide-react";
 
 // === Configuração do endereço para o mapa ===
