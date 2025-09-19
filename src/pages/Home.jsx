@@ -226,7 +226,7 @@ export default function Home() {
 
      <section className="-mx-10">
   <footer className="w-full bg-[#0AAFC0] text-white">
-    <div className="max-w-6xl mx-auto px-6 py-8 space-y-6">
+    <div className="w-full px-10 py-8 space-y-6">
       <p>
         A Maximum Profits detém uma plataforma digital que atua como
         correspondente bancário para facilitar o processo de contratação de
@@ -235,30 +235,32 @@ export default function Home() {
         conforme a Resolução CMN Nº 4.935 do Banco Central do Brasil.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start text-center md:text-left">
-        <div className="flex flex-col items-center md:items-start">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-start text-center md:text-left">
+        <div>
           <h4 className="text-lg font-bold">MAXIMUM PROFITS</h4>
           <p className="mt-2">© 2025 by Maximum Technology.</p>
           <p className="mt-2">CNPJ: 35.690.133/0001-11</p>
         </div>
 
-        <div className="flex flex-col items-center md:items-start">
+        <div>
           <p className="flex">
             <span className="font-semibold inline-block w-28">Endereço:</span>
-            <span className="text-white/90">{ENDERECO}</span>
+            <span>{ENDERECO}</span>
           </p>
           <p className="flex">
             <span className="font-semibold inline-block w-28">Email:</span>
-            <span className="text-white/90">contato@maximumprofits.com.br</span>
+            <span>contato@maximumprofits.com.br</span>
           </p>
           <p className="flex">
             <span className="font-semibold inline-block w-28">Telefone:</span>
-            <span className="text-white/90">61 93505-8737</span>
+            <span>61 93505-8737</span>
           </p>
         </div>
       </div>
     </div>
   </footer>
+</section>
+
 </section>
 
     </NavbarLayout>
