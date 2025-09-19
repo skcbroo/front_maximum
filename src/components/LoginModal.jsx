@@ -37,7 +37,7 @@ export default function LoginModal({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       {/* Modal Card */}
-      <div className="bg-[#D5DADD] w-full max-w-md rounded-2xl shadow-2xl p-8 relative">
+      <div className="bg-[#2F4755] w-full max-w-md rounded-2xl shadow-2xl p-8 relative">
         {/* Botão fechar */}
         <button
           onClick={onClose}
