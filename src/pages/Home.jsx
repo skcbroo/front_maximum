@@ -127,30 +127,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COMO FUNCIONA */}
-      <section className="max-w-6xl mx-auto mb-8">
-        <h3 className="text-xl font-bold text-center mb-4 select-none">
-          Como funciona
-        </h3>
+     {/* COMO FUNCIONA */}
+<section className="max-w-6xl mx-auto mb-8">
+  <h3 className="text-xl font-bold text-center mb-4 select-none">
+    Como funciona
+  </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <StepHome
-            numero="1"
-            titulo="Seleção de oportunidades"
-            texto="Publicamos créditos com informações fundamentais: valor estimado, deságio, fase e quantidade de cotas."
-          />
-          <StepHome
-            numero="2"
-            titulo="Análise e reserva"
-            texto="Você avalia os detalhes e manifesta interesse. Nosso time auxilia com dúvidas e viabilidade."
-          />
-          <StepHome
-            numero="3"
-            titulo="Acompanhamento e recebimento"
-            texto="Monitoramos o andamento e notificamos marcos importantes até a liquidação."
-          />
-        </div>
-      </section>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <StepHome
+      numero="1"
+      titulo="Administração de ativos"
+      texto="Selecionamos e administramos um portfólio diversificado de ativos, com foco em mitigar riscos e buscar rendimentos robustos."
+    />
+    <StepHome
+      numero="2"
+      titulo="Aplicação com retorno fixo"
+      texto="Cada oportunidade oferece rendimentos mensais e devolução do principal ao final do período, sem repassar oscilações do mercado ao investidor."
+    />
+    <StepHome
+      numero="3"
+      titulo="Acompanhamento transparente"
+      texto="Você acompanha seus investimentos de forma simples, com notificações claras sobre os rendimentos e marcos importantes."
+    />
+  </div>
+</section>
+
 
 {/* CHAMADA PARA AÇÃO – full-width */}
 <section className="-mx-10">
