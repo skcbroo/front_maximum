@@ -152,32 +152,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CHAMADA PARA AÇÃO */}
-      <section className="max-w-6xl mx-auto mb-8">
-        <div className="rounded-xl bg-[#EBF4FF] border border-[#CBD5E1] px-6 py-6 shadow-md text-center">
-          <h3 className="text-lg md:text-xl font-bold text-[#1A202C]">
-            Pronto para conhecer as oportunidades?
-          </h3>
-          <p className="text-[#4A5568] mt-1 select-none">
-            Explore a lista de créditos ou fale com nosso time para saber mais.
-          </p>
+{/* CHAMADA PARA AÇÃO */}
+<section className="w-full py-12 bg-[#009688] text-white text-center">
+  <div className="max-w-4xl mx-auto px-6">
+    <h3 className="text-2xl md:text-3xl font-bold">
+      Pronto para conhecer as oportunidades?
+    </h3>
+    <p className="mt-3 text-lg opacity-90">
+      Explore nossa lista de créditos ou fale com nosso time especializado para saber mais.
+    </p>
 
-          <div className="mt-4 flex gap-3 justify-center">
-            <a
-              href="/creditos"
-              className="inline-block bg-[#2B6CB0] text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90 transition"
-            >
-              Acessar créditos
-            </a>
-            <button
-              onClick={falarComEquipe}
-              className="inline-block bg-white text-[#2B6CB0] border border-[#CBD5E1] font-semibold rounded-lg px-5 py-2 hover:bg-[#F7FAFC] transition"
-            >
-              Entrar em contato
-            </button>
-          </div>
-        </div>
-      </section>
+    <div className="mt-6 flex flex-wrap gap-4 justify-center">
+      <a
+        href="/creditos"
+        className="bg-white text-[#009688] font-semibold rounded-lg px-6 py-3 shadow hover:opacity-90 transition"
+      >
+        Acessar Créditos
+      </a>
+      <button
+        onClick={falarComEquipe}
+        className="border border-white text-white font-semibold rounded-lg px-6 py-3 hover:bg-white hover:text-[#009688] transition"
+      >
+        Entrar em Contato
+      </button>
+    </div>
+  </div>
+</section>
+
 
       {/* FAQ */}
       <section className="max-w-6xl mx-auto mb-10">
