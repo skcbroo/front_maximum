@@ -71,9 +71,8 @@ export default function Home() {
                 Investimento seguro, acompanhamento transparente
               </h2>
               <p className="text-[#4A5568] mt-3 select-none">
-                Conectamos oportunidades de créditos judiciais a investidores,
-                com curadoria, informações claras e um painel simples para
-                acompanhar cada etapa até o recebimento.
+                Oferecemos oportunidades de investimento em ativos que geram renda mensal, 
+                informações claras e um painel simples para acompanhar os rendimentos
               </p>
 
               <div className="mt-5 flex flex-wrap gap-3">
