@@ -153,9 +153,10 @@ export default function Home() {
       </section>
 
 {/* CHAMADA PARA AÇÃO */}
-<section className="w-full py-12 bg-[#009688] text-white text-center">
-  <div className="max-w-4xl mx-auto px-6">
-    <h3 className="text-2xl md:text-3xl font-bold">
+<section className="-mx-10">
+  <div className="w-full py-12 bg-[#0AAFC0] text-white">
+    <div className="max-w-5xl mx-auto px-6 text-center">
+      <h3 className="text-2xl md:text-3xl font-bold">
       Pronto para conhecer as oportunidades?
     </h3>
     <p className="mt-3 text-lg opacity-90">
@@ -165,13 +166,13 @@ export default function Home() {
     <div className="mt-6 flex flex-wrap gap-4 justify-center">
       <a
         href="/creditos"
-        className="bg-white text-[#009688] font-semibold rounded-lg px-6 py-3 shadow hover:opacity-90 transition"
+        className="bg-white text-[#0AAFC0] font-semibold rounded-lg px-6 py-3 shadow hover:opacity-90 transition"
       >
         Acessar Créditos
       </a>
       <button
         onClick={falarComEquipe}
-        className="border border-white text-white font-semibold rounded-lg px-6 py-3 hover:bg-white hover:text-[#009688] transition"
+        className="border border-white text-white font-semibold rounded-lg px-6 py-3 hover:bg-white hover:text-[#0AAFC0] transition"
       >
         Entrar em Contato
       </button>
