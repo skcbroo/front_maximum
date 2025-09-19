@@ -279,7 +279,7 @@ function CardHome({ titulo, texto, icon }) {
 }
 
 // StepHome.jsx
-export default function StepHome({ numero, titulo, texto }) {
+function StepHome({ numero, titulo, texto }) {
   return (
     <div className="bg-white shadow-md rounded-lg p-6">
       <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold">
