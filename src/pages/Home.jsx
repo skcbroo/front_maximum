@@ -225,7 +225,7 @@ export default function Home() {
         </div>
       </section>
 
-    <section className="-mx-10">
+   <section className="-mx-10">
   <footer className="w-full bg-[#0AAFC0] text-white">
     <div className="w-full px-10 py-8 space-y-6">
       <p className="text-sm leading-relaxed">
@@ -246,7 +246,10 @@ export default function Home() {
         <div>
           <p className="flex">
             <span className="font-semibold inline-block w-28">Endereço:</span>
-            <span>{ENDERECO}</span>
+            <span>
+              St. de Habitações Individuais Sul QI 19 casa 19 - Lago Sul,
+              Brasília - DF, 71655-040
+            </span>
           </p>
           <p className="flex">
             <span className="font-semibold inline-block w-28">Email:</span>
@@ -261,6 +264,7 @@ export default function Home() {
     </div>
   </footer>
 </section>
+
 
     </NavbarLayout>
   );
