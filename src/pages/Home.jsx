@@ -152,33 +152,35 @@ export default function Home() {
         </div>
       </section>
 
-{/* CHAMADA PARA AÇÃO */}
+{/* CHAMADA PARA AÇÃO – full-width */}
 <section className="-mx-10">
   <div className="w-full py-12 bg-[#0AAFC0] text-white">
     <div className="max-w-5xl mx-auto px-6 text-center">
       <h3 className="text-2xl md:text-3xl font-bold">
-      Pronto para conhecer as oportunidades?
-    </h3>
-    <p className="mt-3 text-lg opacity-90">
-      Explore nossa lista de créditos ou fale com nosso time especializado para saber mais.
-    </p>
+        Pronto para conhecer as oportunidades?
+      </h3>
+      <p className="mt-3 text-lg opacity-90">
+        Explore nossa lista de créditos ou fale com nosso time especializado para saber mais.
+      </p>
 
-    <div className="mt-6 flex flex-wrap gap-4 justify-center">
-      <a
-        href="/creditos"
-        className="bg-white text-[#0AAFC0] font-semibold rounded-lg px-6 py-3 shadow hover:opacity-90 transition"
-      >
-        Acessar Créditos
-      </a>
-      <button
-        onClick={falarComEquipe}
-        className="border border-white text-white font-semibold rounded-lg px-6 py-3 hover:bg-white hover:text-[#0AAFC0] transition"
-      >
-        Entrar em Contato
-      </button>
+      <div className="mt-6 flex flex-wrap gap-4 justify-center">
+        <a
+          href="/creditos"
+          className="bg-white text-[#0AAFC0] font-semibold rounded-lg px-6 py-3 shadow hover:opacity-90 transition"
+        >
+          Acessar Créditos
+        </a>
+        <button
+          onClick={falarComEquipe}
+          className="border border-white text-white font-semibold rounded-lg px-6 py-3 hover:bg-white hover:text-[#0AAFC0] transition"
+        >
+          Entrar em Contato
+        </button>
+      </div>
     </div>
   </div>
 </section>
+
 
 
       {/* FAQ */}
@@ -291,9 +293,10 @@ function FaqHome({ q, a }) {
   return (
     <div className="bg-white border border-[#E5E7EB] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
       <div className="flex items-start gap-3">
-        <div className="w-6 h-6 rounded-md bg-[#0AAFC0] flex items-center justify-center">
-          <CheckCircle className="w-4 h-4 text-white" />
-        </div>
+       <div className="w-6 h-6 rounded-full bg-[#0AAFC0] flex items-center justify-center">
+  <CheckCircle className="w-4 h-4 text-white" />
+</div>
+
         <div>
           <p className="font-semibold text-[#111827]">{q}</p>
           <p className="text-sm text-[#4B5563] mt-1">{a}</p>
