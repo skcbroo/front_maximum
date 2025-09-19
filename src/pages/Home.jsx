@@ -254,7 +254,7 @@ export default function Home() {
                                     <span>contato@maximumprofits.com.br</span>
                                 </p>
 
-                                <p className="flex gap-2">
+                                <p className="flex gap-2 mt-2">
                                     <span className="font-semibold">Telefone:</span>
                                     <span>61 93505-8737</span>
                                 </p>
