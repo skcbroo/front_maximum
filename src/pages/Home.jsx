@@ -257,8 +257,8 @@ export default function Home() {
 
 function CardHome({ titulo, texto, icon }) {
   return (
-    <div className="bg-white border border-[#E5EAF0] rounded-xl px-6 py-6 shadow-md hover:shadow-lg transition">
-      <div className="w-12 h-12 bg-[#15B8C5] rounded-lg flex items-center justify-center mb-4">
+    <div className="bg-[#BDC1C6] border rounded-xl px-6 py-6 shadow-md hover:shadow-lg transition">
+      <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4">
         {icon}
       </div>
       <h4 className="text-lg font-bold text-[#0F172A] mb-2">{titulo}</h4>
