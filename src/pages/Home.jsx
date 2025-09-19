@@ -249,12 +249,12 @@ export default function Home() {
                 <span className="font-semibold">Endereço:</span> {ENDERECO}
               </p>
               <p>
-                <span className="font-semibold">Email:</span>{" "}
-                contato@maximumprofits.com.br
-              </p>
-              <p>
-                <span className="font-semibold">Telefone:</span>  61 93505-8737
-              </p>
+  <span className="font-semibold">Email:</span>{" "}
+  contato@maximumprofits.com.br
+</p>
+<p>
+  <span className="font-semibold">Telefone:</span>  61 93505-8737
+</p>
             </div>
           </div>
         </div>
