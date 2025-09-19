@@ -249,14 +249,16 @@ export default function Home() {
             <span className="font-semibold inline-block w-28">Endereço:</span>
             <span>{ENDERECO}</span>
           </p>
-          <p className="flex">
-            <span className="font-semibold inline-block w-28">Email:</span>
-            <span>contato@maximumprofits.com.br</span>
-          </p>
-          <p className="flex">
-            <span className="font-semibold inline-block w-28">Telefone:</span>
-            <span>61 93505-8737</span>
-          </p>
+         <p className="flex gap-2">
+  <span className="font-semibold">Email:</span>
+  <span>contato@maximumprofits.com.br</span>
+</p>
+
+<p className="flex gap-2">
+  <span className="font-semibold">Telefone:</span>
+  <span>61 93505-8737</span>
+</p>
+
         </div>
       </div>
     </div>
