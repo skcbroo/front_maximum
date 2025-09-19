@@ -51,7 +51,7 @@ export default function Login() {
       <div className="min-h-screen w-full flex items-center justify-center bg-transparent px-4">
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-md bg-C6CDD1 backdrop-blur-xl text-gray-800 rounded-2xl shadow-2xl border border-white/40 px-8 py-10"
+          className="w-full max-w-md bg-[#ABABAB] backdrop-blur-xl text-gray-800 rounded-2xl shadow-2xl border border-white/40 px-8 py-10"
           aria-labelledby="titulo-login"
         >
           {/* logo opcional no topo do card */}
@@ -164,6 +164,7 @@ export default function Login() {
     </NavbarLayout>
   );
 }
+
 
 
 
