@@ -214,7 +214,7 @@ export default function Home() {
           Onde estamos
         </h3>
 
-        <div className="rounded-xl bg-[#EBF4FF] border border-[#CBD5E1] px-6 py-6 shadow-md text-[#2D3748]">
+        <div className="rounded-xl bg-white border border-[#CBD5E1] px-6 py-6 shadow-md text-[#2D3748]">
           <p className="text-sm mb-3">
             <span className="font-semibold">Endereço: </span>
             {ENDERECO}
