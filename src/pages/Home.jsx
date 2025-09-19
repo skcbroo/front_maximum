@@ -54,7 +54,9 @@ export default function Home() {
 
   return (
     <NavbarLayout>
-      <h1 className="sr-only">Maximum Profits — Plataforma de Créditos Judiciais</h1>
+      <h1 className="sr-only">
+        Maximum Profits — Plataforma de Créditos Judiciais
+      </h1>
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto mb-8">
@@ -221,16 +223,18 @@ export default function Home() {
       <footer className="bg-transparent text-sm mt-12">
         <div className="max-w-6xl mx-auto px-6 py-8 space-y-6 text-sm text-[#1A202C]">
           <p>
-            A Maximum Profits detém uma plataforma digital que atua como correspondente
-            bancário para facilitar o processo de contratação de empréstimos. A Maximum
-            Profits não é instituição financeira e não fornece crédito ao mercado.
-            Atuamos como correspondente bancário conforme a Resolução CMN Nº 4.935 do
-            Banco Central do Brasil.
+            A Maximum Profits detém uma plataforma digital que atua como
+            correspondente bancário para facilitar o processo de contratação de
+            empréstimos. A Maximum Profits não é instituição financeira e não
+            fornece crédito ao mercado. Atuamos como correspondente bancário
+            conforme a Resolução CMN Nº 4.935 do Banco Central do Brasil.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-center md:text-left">
             <div className="flex flex-col items-center md:items-center">
-              <h4 className="text-lg font-bold text-[#1A202C]">MAXIMUM PROFITS</h4>
+              <h4 className="text-lg font-bold text-[#1A202C]">
+                MAXIMUM PROFITS
+              </h4>
               <p className="mt-2">© 2023 by Midlej Technology.</p>
               <p className="mt-2">CNPJ: 35.340.252/0001-44</p>
             </div>
@@ -240,7 +244,8 @@ export default function Home() {
                 <span className="font-semibold">Endereço:</span> {ENDERECO}
               </p>
               <p>
-                <span className="font-semibold">Email:</span> contato@midlejcapital.com.br
+                <span className="font-semibold">Email:</span>{" "}
+                contato@midlejcapital.com.br
               </p>
               <p>
                 <span className="font-semibold">Telefone:</span> 61 99620-4646
@@ -257,8 +262,8 @@ export default function Home() {
 
 function CardHome({ titulo, texto, icon }) {
   return (
-    <div className="bg-[#BDC1C6] rounded-xl px-6 py-6 shadow-md hover:shadow-lg transition">
-      <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center mb-4">
+    <div className="bg-white border border-[#E2E8F0] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
+      <div className="w-12 h-12 bg-[#2B6CB0] rounded-lg flex items-center justify-center mb-4">
         {icon}
       </div>
       <h4 className="text-lg font-bold text-[#0F172A] mb-2">{titulo}</h4>
@@ -269,8 +274,8 @@ function CardHome({ titulo, texto, icon }) {
 
 function StepHome({ numero, titulo, texto }) {
   return (
-    <div className="bg-[#BDC1C6] rounded-xl px-6 py-6 shadow-md hover:shadow-lg transition">
-      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#EBF4FF] text-[#2B6CB0] font-bold mb-2">
+    <div className="bg-white border border-[#E2E8F0] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
+      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#2B6CB0] text-white font-bold mb-2">
         {numero}
       </div>
       <h4 className="text-lg font-bold text-[#0F172A] mb-2">{titulo}</h4>
@@ -281,10 +286,10 @@ function StepHome({ numero, titulo, texto }) {
 
 function FaqHome({ q, a }) {
   return (
-    <div className="bg-[#BDC1C6] rounded-xl px-6 py-6 shadow-md hover:shadow-lg transition">
+    <div className="bg-white border border-[#E2E8F0] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
       <div className="flex items-start gap-3">
-        <div className="w-6 h-6 rounded-md bg-[#EBF4FF] flex items-center justify-center">
-          <CheckCircle className="w-4 h-4 text-[#2B6CB0]" />
+        <div className="w-6 h-6 rounded-md bg-[#2B6CB0] flex items-center justify-center">
+          <CheckCircle className="w-4 h-4 text-white" />
         </div>
         <div>
           <p className="font-semibold text-[#0F172A]">{q}</p>
