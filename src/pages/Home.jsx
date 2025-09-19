@@ -240,7 +240,7 @@ export default function Home() {
                 MAXIMUM PROFITS
               </h4>
               <p className="mt-2">© 2023 by Maximum Technology.</p>
-              <p className="mt-2">CNPJ: 35.340.252/0001-44</p>
+              <p className="mt-2">CNPJ: 35.690.133/0001-11</p>
             </div>
 
             <div className="flex flex-col items-center md:items-center">
