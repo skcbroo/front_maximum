@@ -84,7 +84,7 @@ export default function Home() {
                 </a>
                 <button
                   onClick={falarComEquipe}
-                  className="inline-block bg-white text-[#2B6CB0] border border-[#009688] font-semibold rounded-lg px-5 py-2 hover:bg-[#F7FAFC] transition"
+                  className="inline-block bg-white text-[#009688] border border-[#009688] font-semibold rounded-lg px-5 py-2 hover:bg-[#F7FAFC] transition"
                 >
                   Fale com a equipe
                 </button>
