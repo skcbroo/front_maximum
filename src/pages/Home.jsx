@@ -278,17 +278,19 @@ function CardHome({ titulo, texto, icon }) {
   );
 }
 
-function StepHome({ numero, titulo, texto }) {
+// StepHome.jsx
+export default function StepHome({ numero, titulo, texto }) {
   return (
-    <div className="bg-white border border-[#E5E7EB] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
-      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#0AAFC0] text-white font-bold mb-2">
+    <div className="bg-white shadow-md rounded-lg p-6">
+      <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold">
         {numero}
       </div>
-      <h4 className="text-lg font-bold text-[#111827] mb-2">{titulo}</h4>
-      <p className="text-sm text-[#4B5563]">{texto}</p>
+      <h4 className="font-bold text-lg text-center">{titulo}</h4>
+      <p className="text-sm text-gray-600 mt-2 text-center">{texto}</p>
     </div>
   );
 }
+
 
 function FaqHome({ q, a }) {
   return (
