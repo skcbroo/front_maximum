@@ -148,7 +148,7 @@ export default function Login() {
     type="submit"
     disabled={loading}
     className={`w-1/2 p-3 rounded-lg text-white transition ${
-      loading ? "bg-gray-500 cursor-not-allowed" : "bg-[#0AAFC0] hover:bg-[#1a212f]"
+      loading ? "bg-gray-500 cursor-not-allowed" : "bg-[#0AAFC0] hover:bg-[#2F4755]"
     }`}
   >
     {loading ? "Entrando..." : "Entrar"}
@@ -164,6 +164,7 @@ export default function Login() {
     </NavbarLayout>
   );
 }
+
 
 
 
