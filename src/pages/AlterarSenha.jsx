@@ -49,7 +49,7 @@ export default function AlterarSenha() {
           aria-labelledby="titulo-alterar-senha"
         >
           <div className="mb-6 text-center select-none cursor-default">
-            <img src="/logonova.png" alt="Midlej Capital" className="mx-auto h-16 mb-3" />
+            <img src="/logo1.png" alt="Midlej Capital" className="mx-auto h-16 mb-3" />
           </div>
 
           <h2
