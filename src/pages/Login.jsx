@@ -45,7 +45,7 @@ export default function Login() {
 
   return (
     <NavbarLayout>
-      <h1 className="sr-only">Midlej Capital — Plataforma de Créditos Judiciais</h1>
+      <h1 className="sr-only">Maximum Profits — Plataforma de Créditos Judiciais</h1>
 
       {/* tela inteira com o card centralizado */}
       <div className="min-h-screen w-full flex items-center justify-center bg-transparent px-4">
@@ -56,7 +56,7 @@ export default function Login() {
         >
           {/* logo opcional no topo do card */}
           <div className="mb-6 text-center select-none cursor-default">
-            <img src="/logo1.png" alt="Midlej Capital" className="mx-auto h-16 mb-3" />
+            <img src="/logo2.png" alt="Maximum Profits" className="mx-auto h-16 mb-3" />
           </div>
 
           <h2
@@ -164,6 +164,7 @@ export default function Login() {
     </NavbarLayout>
   );
 }
+
 
 
 
