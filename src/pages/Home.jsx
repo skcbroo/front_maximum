@@ -311,4 +311,6 @@ function FaqHome({ q, a }) {
         </div>
       </div>
     </div>
-  )
+  );
+}
+
