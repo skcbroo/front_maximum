@@ -1,16 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import LoginModal from "./LoginModal"; // 👈 importa o modal
+import LoginModal from "./LoginModal"; 
+import AlterarSenhaModal from "./AlterarSenhaModal";
 
 export default function NavbarLayout({ children }) {
   const role = localStorage.getItem("role");
   const navigate = useNavigate();
   const [loginAberto, setLoginAberto] = useState(false);
+  const [alterarSenhaAberto, setAlterarSenhaAberto] = useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem("role");
     localStorage.removeItem("token");
-    navigate("/"); // Redireciona para a página inicial
+    navigate("/"); 
   };
 
   return (
@@ -48,12 +50,12 @@ export default function NavbarLayout({ children }) {
                   >
                     Meus Ativos
                   </Link>
-                  <Link
-                    to="/alterar-senha"
-                    className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
+                  <button
+                    onClick={() => setAlterarSenhaAberto(true)}
+                    className="hover:text-[#E0F2F1] transition cursor-pointer select-none bg-transparent border-none text-white"
                   >
                     Alterar Senha
-                  </Link>
+                  </button>
                 </>
               )}
 
@@ -83,12 +85,12 @@ export default function NavbarLayout({ children }) {
                   >
                     Usuários
                   </Link>
-                  <Link
-                    to="/alterar-senha"
-                    className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
+                  <button
+                    onClick={() => setAlterarSenhaAberto(true)}
+                    className="hover:text-[#E0F2F1] transition cursor-pointer select-none bg-transparent border-none text-white"
                   >
                     Alterar Senha
-                  </Link>
+                  </button>
                 </>
               )}
 
@@ -101,7 +103,7 @@ export default function NavbarLayout({ children }) {
             </>
           ) : (
             <button
-              onClick={() => setLoginAberto(true)} // 👈 abre o modal
+              onClick={() => setLoginAberto(true)} 
               className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
             >
               Entrar
@@ -115,6 +117,12 @@ export default function NavbarLayout({ children }) {
 
       {/* Modal de Login */}
       <LoginModal isOpen={loginAberto} onClose={() => setLoginAberto(false)} />
+
+      {/* Modal de Alterar Senha */}
+      <AlterarSenhaModal
+        isOpen={alterarSenhaAberto}
+        onClose={() => setAlterarSenhaAberto(false)}
+      />
     </div>
   );
 }
