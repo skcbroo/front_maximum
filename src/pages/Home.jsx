@@ -58,7 +58,7 @@ export default function Home() {
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto mb-8">
-        <div className="rounded-xl bg-white border border-[#CBD5E1] px-6 py-8 shadow-md">
+        <div className="rounded-xl bg-white border px-6 py-8 shadow-md">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div>
               <p className="text-sm font-medium text-gray-500 uppercase tracking-wide select-none cursor-default">
