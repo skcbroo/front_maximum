@@ -239,7 +239,7 @@ export default function Home() {
               <h4 className="text-lg font-bold text-[#1A202C]">
                 MAXIMUM PROFITS
               </h4>
-              <p className="mt-2">© 2023 by Maximum Technology.</p>
+              <p className="mt-2">© 2025 by Maximum Technology.</p>
               <p className="mt-2">CNPJ: 35.690.133/0001-11</p>
             </div>
 
