@@ -43,7 +43,7 @@ export default function AlterarSenhaModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 relative">
+      <div className="bg-[#D5DADD] rounded-2xl shadow-2xl w-full max-w-md p-6 relative">
         {/* Botão de fechar */}
         <button
           onClick={onClose}
