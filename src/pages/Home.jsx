@@ -185,29 +185,30 @@ export default function Home() {
                 </section>
 
                 {/* FAQ */}
-                <section className="max-w-6xl mx-auto mb-10">
-                    <h3 className="text-xl font-bold text-center mt-12 mb-6 select-none">
-                        Perguntas frequentes
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <FaqHome
-                            q="O que é um crédito judicial?"
-                            a="É um direito de receber um valor decorrente de uma ação judicial. Na plataforma, exibimos informações essenciais para avaliação do investidor."
-                        />
-                        <FaqHome
-                            q="Posso acessar os créditos sem cadastro?"
-                            a="A listagem é pública, mas para reservar/seguir adiante será necessário cadastro e verificação."
-                        />
-                        <FaqHome
-                            q="Como é calculado o deságio?"
-                            a="O deságio é a relação entre o preço de aquisição e o valor do crédito. Exibimos isso claramente em cada card."
-                        />
-                        <FaqHome
-                            q="Existe suporte para dúvidas?"
-                            a="Sim. Nosso atendimento está disponível para orientar e esclarecer qualquer ponto antes da decisão."
-                        />
-                    </div>
-                </section>
+<section className="max-w-6xl mx-auto mb-10">
+  <h3 className="text-xl font-bold text-center mt-12 mb-6 select-none">
+    Perguntas frequentes
+  </h3>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <FaqHome
+      q="Como funcionam os investimentos da Maximum?"
+      a="Cada aplicação é estruturada para gerar rendimentos mensais durante um período definido e devolução do valor principal ao final do prazo."
+    />
+    <FaqHome
+      q="Existe risco de perda?"
+      a="Todo investimento possui riscos, mas nossa curadoria busca mitigar ao máximo por meio da análise dos ativos e diversificação da carteira."
+    />
+    <FaqHome
+      q="Posso resgatar meu investimento antes do prazo?"
+      a="As aplicações têm prazo definido. Em caso de necessidade de liquidez, entre em contato com nossa equipe para avaliarmos alternativas."
+    />
+    <FaqHome
+      q="Como acompanho meus rendimentos?"
+      a="Você terá acesso a um painel simples e transparente, com notificações sobre pagamentos mensais e informações atualizadas sobre o ativo."
+    />
+  </div>
+</section>
+
 
                 {/* LOCALIZAÇÃO */}
                 <section className="max-w-6xl mx-auto mb-8">
