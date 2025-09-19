@@ -292,11 +292,13 @@ function StepHome({ numero, titulo, texto }) {
 function FaqHome({ q, a }) {
   return (
     <div className="bg-white border border-[#E5E7EB] rounded-xl px-6 py-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition transform">
-      <div className="flex items-start gap-3">
-       <div className="w-6 h-6 rounded-full bg-[#0AAFC0] flex items-center justify-center">
-  <CheckCircle className="w-4 h-4 text-white" />
-</div>
+      <div className="flex items-start gap-4">
+        {/* Ícone dentro de um círculo maior */}
+        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#0AAFC0] flex items-center justify-center shadow-sm">
+          <CheckCircle className="w-5 h-5 text-white" strokeWidth={2.5} />
+        </div>
 
+        {/* Texto */}
         <div>
           <p className="font-semibold text-[#111827]">{q}</p>
           <p className="text-sm text-[#4B5563] mt-1">{a}</p>
@@ -305,4 +307,5 @@ function FaqHome({ q, a }) {
     </div>
   );
 }
+
 
