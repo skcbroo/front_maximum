@@ -41,7 +41,7 @@ export default function NavbarLayout({ children }) {
             <>
               {/* Link padrão visível para todos os logados */}
               <Link
-                to="/aplicacoes-disponiveis"
+                to="/aplicacoes"
                 className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
               >
                 Aplicações Disponíveis
@@ -138,4 +138,5 @@ export default function NavbarLayout({ children }) {
     </div>
   );
 }
+
 
