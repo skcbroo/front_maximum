@@ -37,7 +37,7 @@ export default function NavbarLayout({ children }) {
             to="/creditos"
             className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
           >
-            Ativos Disponíveis
+            Aplicações Disponíveis
           </Link>
 
           {role ? (
@@ -48,7 +48,7 @@ export default function NavbarLayout({ children }) {
                     to="/meus-ativos"
                     className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
                   >
-                    Meus Ativos
+                    Minhas Aplicações
                   </Link>
                   <button
                     onClick={() => setAlterarSenhaAberto(true)}
@@ -126,5 +126,6 @@ export default function NavbarLayout({ children }) {
     </div>
   );
 }
+
 
 
