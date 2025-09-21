@@ -1,13 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { User } from "lucide-react"; // 👈 ícone de usuário
+import { User } from "lucide-react";
 import LoginModal from "./LoginModal";
 import AlterarSenhaModal from "./AlterarSenhaModal";
 
 export default function NavbarLayout({ children }) {
   const role = localStorage.getItem("role");
-  const user = JSON.parse(localStorage.getItem("user") || "{}"); // 👈 pegando dados do usuário
-  const firstName = user?.nome?.split(" ")[0] || ""; // 👈 primeiro nome
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+  const firstName = user?.nome?.split(" ")[0] || "";
   const navigate = useNavigate();
   const [loginAberto, setLoginAberto] = useState(false);
   const [alterarSenhaAberto, setAlterarSenhaAberto] = useState(false);
@@ -15,7 +15,7 @@ export default function NavbarLayout({ children }) {
   const handleLogout = () => {
     localStorage.removeItem("role");
     localStorage.removeItem("token");
-    localStorage.removeItem("user"); // 👈 limpando user também
+    localStorage.removeItem("user");
     navigate("/");
   };
 
@@ -23,7 +23,7 @@ export default function NavbarLayout({ children }) {
     <div className="min-h-screen bg-[#F9FAFB] text-[#111827]">
       {/* Navbar */}
       <nav className="bg-[#2F4755] text-white shadow-md px-6 py-3 flex items-center justify-between select-none">
-        {/* Logo clicável */}
+        {/* Logo */}
         <div className="flex items-center gap-2">
           <Link to="/">
             <img
@@ -40,22 +40,13 @@ export default function NavbarLayout({ children }) {
           {role ? (
             <>
               {role === "cliente" && (
-                <>
-                  <Link
-                    to="/minhas-aplicacoes"
-                    className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
-                  >
-                    Minhas Aplicações
-                  </Link>
-                  <button
-                    onClick={() => setAlterarSenhaAberto(true)}
-                    className="hover:text-[#E0F2F1] transition cursor-pointer select-none bg-transparent border-none text-white"
-                  >
-                    Alterar Senha
-                  </button>
-                </>
+                <Link
+                  to="/minhas-aplicacoes"
+                  className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
+                >
+                  Minhas Aplicações
+                </Link>
               )}
-
               {role === "admin" && (
                 <>
                   <Link
@@ -82,47 +73,50 @@ export default function NavbarLayout({ children }) {
                   >
                     Usuários
                   </Link>
-                  <button
-                    onClick={() => setAlterarSenhaAberto(true)}
-                    className="hover:text-[#E0F2F1] transition cursor-pointer select-none bg-transparent border-none text-white"
-                  >
-                    Alterar Senha
-                  </button>
                 </>
               )}
 
-              {/* Ícone de usuário + nome */}
-              <div className="flex flex-col items-center">
-                <User className="w-6 h-6" />
-                <span className="text-xs">{firstName}</span>
-              </div>
+              {/* Dropdown do usuário */}
+              <div className="relative group">
+                <button className="flex items-center gap-2 hover:text-[#E0F2F1]">
+                  <User className="w-6 h-6" />
+                  <span className="text-sm">{firstName}</span>
+                </button>
 
-              <button
-                onClick={handleLogout}
-                className="hover:text-[#E0F2F1] transition cursor-pointer select-none bg-transparent border-none text-white"
-              >
-                Sair
-              </button>
+                {/* Painel ao passar o mouse */}
+                <div className="absolute right-0 mt-2 w-40 bg-white text-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                  <button
+                    onClick={() => setAlterarSenhaAberto(true)}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                  >
+                    Alterar Senha
+                  </button>
+                  <button
+                    onClick={handleLogout}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                  >
+                    Sair
+                  </button>
+                </div>
+              </div>
             </>
           ) : (
             <button
               onClick={() => setLoginAberto(true)}
               className="flex flex-col items-center hover:text-[#E0F2F1] transition cursor-pointer select-none"
             >
-              <User className="w-6 h-6" /> {/* Ícone */}
-              <span className="text-xs">Entrar</span> {/* Texto abaixo */}
+              <User className="w-6 h-6" />
+              <span className="text-xs">Entrar</span>
             </button>
           )}
         </div>
       </nav>
 
-      {/* Conteúdo da página */}
+      {/* Conteúdo */}
       <div className="p-10 min-h-[calc(100vh-80px)]">{children}</div>
 
-      {/* Modal de Login */}
+      {/* Modais */}
       <LoginModal isOpen={loginAberto} onClose={() => setLoginAberto(false)} />
-
-      {/* Modal de Alterar Senha */}
       <AlterarSenhaModal
         isOpen={alterarSenhaAberto}
         onClose={() => setAlterarSenhaAberto(false)}
