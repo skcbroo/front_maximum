@@ -1,10 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import LoginModal from "./LoginModal"; 
+import { User } from "lucide-react"; // 👈 ícone de usuário
+import LoginModal from "./LoginModal";
 import AlterarSenhaModal from "./AlterarSenhaModal";
 
 export default function NavbarLayout({ children }) {
   const role = localStorage.getItem("role");
+  const user = JSON.parse(localStorage.getItem("user") || "{}"); // 👈 pegando dados do usuário
+  const firstName = user?.nome?.split(" ")[0] || ""; // 👈 primeiro nome
   const navigate = useNavigate();
   const [loginAberto, setLoginAberto] = useState(false);
   const [alterarSenhaAberto, setAlterarSenhaAberto] = useState(false);
@@ -12,7 +15,8 @@ export default function NavbarLayout({ children }) {
   const handleLogout = () => {
     localStorage.removeItem("role");
     localStorage.removeItem("token");
-    navigate("/"); 
+    localStorage.removeItem("user"); // 👈 limpando user também
+    navigate("/");
   };
 
   return (
@@ -32,8 +36,7 @@ export default function NavbarLayout({ children }) {
         </div>
 
         {/* Menu */}
-        <div className="flex gap-6 text-sm font-medium">
-          
+        <div className="flex gap-6 text-sm font-medium items-center">
           {role ? (
             <>
               {role === "cliente" && (
@@ -88,6 +91,12 @@ export default function NavbarLayout({ children }) {
                 </>
               )}
 
+              {/* Ícone de usuário + nome */}
+              <div className="flex flex-col items-center">
+                <User className="w-6 h-6" />
+                <span className="text-xs">{firstName}</span>
+              </div>
+
               <button
                 onClick={handleLogout}
                 className="hover:text-[#E0F2F1] transition cursor-pointer select-none bg-transparent border-none text-white"
@@ -97,10 +106,11 @@ export default function NavbarLayout({ children }) {
             </>
           ) : (
             <button
-              onClick={() => setLoginAberto(true)} 
-              className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
+              onClick={() => setLoginAberto(true)}
+              className="flex flex-col items-center hover:text-[#E0F2F1] transition cursor-pointer select-none"
             >
-              Entrar
+              <User className="w-6 h-6" /> {/* Ícone */}
+              <span className="text-xs">Entrar</span> {/* Texto abaixo */}
             </button>
           )}
         </div>
@@ -120,8 +130,3 @@ export default function NavbarLayout({ children }) {
     </div>
   );
 }
-
-
-
-
-
