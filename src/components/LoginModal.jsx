@@ -20,15 +20,23 @@ export default function LoginModal({ isOpen, onClose }) {
         `${import.meta.env.VITE_API_URL}/api/auth/login`,
         { email, senha }
       );
+
+      // ✅ salva tudo no localStorage
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("role", res.data.role);
+      if (res.data.user) {
+        localStorage.setItem("user", JSON.stringify(res.data.user));
+      }
 
       if (lembrar) localStorage.setItem("login_email", email);
       else localStorage.removeItem("login_email");
 
       onClose(); // fecha modal depois do login
-    } catch {
-      setErro("E-mail ou senha inválidos.");
+      window.location.reload(); // 👈 força atualização da navbar
+    } catch (err) {
+      setErro(
+        err.response?.data?.erro || "E-mail ou senha inválidos."
+      );
     } finally {
       setLoading(false);
     }
@@ -93,7 +101,7 @@ export default function LoginModal({ isOpen, onClose }) {
               />
               Lembrar-me
             </label>
-            <a href="/" className="text-[#0AAFC0] hover:underline">
+            <a href="/resetar-senha" className="text-[#0AAFC0] hover:underline">
               Esqueci a senha
             </a>
           </div>
