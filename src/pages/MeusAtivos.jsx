@@ -77,12 +77,12 @@ export default function MeusAtivos() {
     <NavbarLayout>
       <div className="max-w-7xl mx-auto p-4">
         <h2 className="text-2xl font-bold text-center mb-6 select-none cursor-default">
-          Meus Ativos
+          Minhas Aplicações
         </h2>
 
         {ativos.length === 0 ? (
           <p className="text-center text-gray-700">
-            Você ainda não possui ativos adquiridos.
+            Você ainda não possui aplicações.
           </p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto select-none cursor-default">
