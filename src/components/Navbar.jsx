@@ -39,6 +39,14 @@ export default function NavbarLayout({ children }) {
         <div className="flex gap-6 text-sm font-medium items-center">
           {role ? (
             <>
+              {/* Link padrão visível para todos os logados */}
+              <Link
+                to="/aplicacoes-disponiveis"
+                className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
+              >
+                Aplicações Disponíveis
+              </Link>
+
               {role === "cliente" && (
                 <Link
                   to="/minhas-aplicacoes"
@@ -47,6 +55,7 @@ export default function NavbarLayout({ children }) {
                   Minhas Aplicações
                 </Link>
               )}
+
               {role === "admin" && (
                 <>
                   <Link
@@ -84,7 +93,12 @@ export default function NavbarLayout({ children }) {
                 </button>
 
                 {/* Painel ao passar o mouse */}
-                <div className="absolute right-0 mt-2 w-40 bg-white text-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                  {/* Header com nome */}
+                  <div className="px-4 py-2 border-b border-gray-200 text-sm font-semibold text-gray-700">
+                    {user?.nome || "Usuário"}
+                  </div>
+
                   <button
                     onClick={() => setAlterarSenhaAberto(true)}
                     className="block w-full text-left px-4 py-2 hover:bg-gray-100"
