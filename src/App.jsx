@@ -26,8 +26,8 @@ function App() {
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/esqueci-senha" element={<EsqueciSenha />} />
                 <Route path="/resetar-senha/:token" element={<ResetarSenha />} />
-                <Route path="/creditos" element={<Creditos />} />
-                <Route path="/admin/aplicacoes" element={<AdminCreditos />} />
+                <Route path="/aplicacoes" element={<Creditos />} />
+                <Route path="/admin/creditos" element={<AdminCreditos />} />
                 <Route path="/admin/usuarios" element={<AdminUsuarios />} />
                 <Route path="/admin/dashboard" element={<AdminDashboard />} />
                 <Route path="/creditos/:id" element={<DetalhesCredito />} /> 
@@ -41,6 +41,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
