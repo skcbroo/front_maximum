@@ -79,7 +79,7 @@ export default function Home() {
 
                                 <div className="mt-5 flex flex-wrap gap-3">
                                     <a
-                                        href="/creditos"
+                                        href="/aplicacoes"
                                         className="inline-block bg-[#0AAFC0] text-white font-semibold rounded-lg px-5 py-2 hover:opacity-90 transition"
                                     >
                                         Aplicações disponíveis
@@ -168,7 +168,7 @@ export default function Home() {
 
                             <div className="mt-6 flex flex-wrap gap-4 justify-center">
                                 <a
-                                    href="/creditos"
+                                    href="/aplicacoes"
                                     className="bg-white text-[#0AAFC0] font-semibold rounded-lg px-6 py-3 shadow hover:opacity-90 transition"
                                 >
                                     Acessar Aplicações
