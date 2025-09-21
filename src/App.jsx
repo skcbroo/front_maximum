@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
-import Creditos from "./pages/Ativos";
+import Creditos from "./pages/Creditos";
 import AdminCreditos from "./pages/AdminCreditos";
 import AdminUsuarios from "./pages/AdminUsuarios";
 import AdminDashboard from "./pages/AdminDashboard";
@@ -26,7 +26,7 @@ function App() {
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/esqueci-senha" element={<EsqueciSenha />} />
                 <Route path="/resetar-senha/:token" element={<ResetarSenha />} />
-                <Route path="/ativos" element={<Ativos />} />
+                <Route path="/creditos" element={<Creditos />} />
                 <Route path="/admin/creditos" element={<AdminCreditos />} />
                 <Route path="/admin/usuarios" element={<AdminUsuarios />} />
                 <Route path="/admin/dashboard" element={<AdminDashboard />} />
@@ -41,7 +41,5 @@ function App() {
 }
 
 export default App;
-
-
 
 
