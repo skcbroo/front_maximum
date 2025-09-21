@@ -27,11 +27,11 @@ function App() {
                 <Route path="/esqueci-senha" element={<EsqueciSenha />} />
                 <Route path="/resetar-senha/:token" element={<ResetarSenha />} />
                 <Route path="/creditos" element={<Creditos />} />
-                <Route path="/admin/creditos" element={<AdminCreditos />} />
+                <Route path="/admin/aplicacoes" element={<AdminCreditos />} />
                 <Route path="/admin/usuarios" element={<AdminUsuarios />} />
                 <Route path="/admin/dashboard" element={<AdminDashboard />} />
                 <Route path="/creditos/:id" element={<DetalhesCredito />} /> 
-                <Route path="/meus-ativos" element={<MeusAtivos />} />
+                <Route path="/minhas-aplicacoes" element={<MeusAtivos />} />
                 <Route path="/admin/cotas" element={<AdminCotas />} />
                 <Route path="/verificar-email/:token" element={<VerificarEmail />} />
                 <Route path="/alterar-senha" element={<AlterarSenha />} /> 
@@ -41,5 +41,6 @@ function App() {
 }
 
 export default App;
+
 
 
