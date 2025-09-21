@@ -34,10 +34,10 @@ export default function NavbarLayout({ children }) {
         {/* Menu */}
         <div className="flex gap-6 text-sm font-medium">
           <Link
-            to="/creditos"
+            to="/ativos"
             className="hover:text-[#E0F2F1] transition cursor-pointer select-none"
           >
-            Créditos
+            Ativos Disponíveis
           </Link>
 
           {role ? (
@@ -126,3 +126,4 @@ export default function NavbarLayout({ children }) {
     </div>
   );
 }
+
