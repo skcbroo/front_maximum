@@ -1,4 +1,3 @@
-// DetalhesAplicacao.jsx
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import NavbarLayout from "../components/Navbar";
@@ -7,10 +6,11 @@ import axios from "axios";
 export default function DetalhesAplicacao() {
   const { id } = useParams();
   const [produto, setProduto] = useState(null);
-  const [aporte, setAporte] = useState(1000);
+  const [aporte, setAporte] = useState(1000); // numérico interno
+  const [aporteTexto, setAporteTexto] = useState("1.000,00"); // exibido formatado
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const numeroEmpresa = "5561996204646"; // WhatsApp
+  const numeroEmpresa = "5561935058737"; // WhatsApp
 
   useEffect(() => {
     try {
@@ -35,9 +35,36 @@ export default function DetalhesAplicacao() {
     );
   }
 
-  const fator = Math.pow(1 + produto.taxaMensal, produto.prazoMeses);
-  const rentabilidadeTotal = (fator - 1) * 100;
-  const valorFinal = aporte * fator;
+  // juros simples
+  const rentabilidadeTotal = produto.taxaMensal * produto.prazoMeses * 100;
+  const valorFinal = aporte + aporte * produto.taxaMensal * produto.prazoMeses;
+
+  // formatador BRL
+  const formatador = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    minimumFractionDigits: 2,
+  });
+
+  const formatadorNumero = new Intl.NumberFormat("pt-BR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+
+  const handleAporteChange = (e) => {
+    let valor = e.target.value.replace(/\./g, "").replace(",", ".");
+    let numero = parseFloat(valor);
+
+    if (isNaN(numero)) {
+      setAporte(0);
+      setAporteTexto("");
+    } else {
+      setAporte(numero);
+      setAporteTexto(
+        formatadorNumero.format(numero).replace(".", ",")
+      );
+    }
+  };
 
   const confirmarSimulacao = () => {
     const mensagem = encodeURIComponent(
@@ -45,8 +72,8 @@ export default function DetalhesAplicacao() {
         `Produto: ${produto.nome}\n` +
         `Prazo: ${produto.prazoMeses} meses\n` +
         `Taxa mensal: ${(produto.taxaMensal * 100).toFixed(2)}%\n\n` +
-        `Simulação de aporte: R$ ${aporte.toLocaleString("pt-BR")}\n` +
-        `Valor final projetado: R$ ${valorFinal.toLocaleString("pt-BR")}\n\n` +
+        `Simulação de aporte: ${formatador.format(aporte)}\n` +
+        `Valor final projetado: ${formatador.format(valorFinal)}\n\n` +
         `Aguardo o retorno. Obrigado!`
     );
 
@@ -93,21 +120,14 @@ export default function DetalhesAplicacao() {
             </label>
             <input
               id="aporte"
-              type="number"
-              min={100}
-              step={100}
-              value={aporte}
-              onChange={(e) => setAporte(Number(e.target.value))}
+              type="text"
+              value={aporteTexto}
+              onChange={handleAporteChange}
               className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <p className="text-sm text-gray-800">
               Valor final projetado:{" "}
-              <strong>
-                {valorFinal.toLocaleString("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
-                })}
-              </strong>
+              <strong>{formatador.format(valorFinal)}</strong>
             </p>
           </div>
 
@@ -137,4 +157,3 @@ export default function DetalhesAplicacao() {
     </NavbarLayout>
   );
 }
-
