@@ -62,7 +62,7 @@ export default function DetalhesAplicacao() {
     labels,
     datasets: [
       {
-        label: "Aplicação",
+        label: `${produto.nome}`,
         data: rendimentosProduto,
         borderColor: "#0074D9",
         backgroundColor: "#0074D9",
@@ -209,4 +209,5 @@ export default function DetalhesAplicacao() {
     </NavbarLayout>
   );
 }
+
 
