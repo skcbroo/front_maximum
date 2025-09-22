@@ -1,3 +1,4 @@
+// DetalhesAplicacao.jsx
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import NavbarLayout from "../components/Navbar";
@@ -19,11 +20,8 @@ export default function DetalhesAplicacao() {
     }
 
     axios
-      .get(`${import.meta.env.VITE_API_URL}/api/produtos`)
-      .then((res) => {
-        const encontrado = res.data.find((p) => p.id === parseInt(id));
-        setProduto(encontrado || null);
-      })
+      .get(`${import.meta.env.VITE_API_URL}/api/produtos/${id}`)
+      .then((res) => setProduto(res.data))
       .catch(() => setProduto(null));
   }, [id]);
 
@@ -37,7 +35,6 @@ export default function DetalhesAplicacao() {
     );
   }
 
-  // cálculo da rentabilidade
   const fator = Math.pow(1 + produto.taxaMensal, produto.prazoMeses);
   const rentabilidadeTotal = (fator - 1) * 100;
   const valorFinal = aporte * fator;
