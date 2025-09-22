@@ -63,7 +63,7 @@ export default function Aplicacoes() {
                   <p className="font-semibold text-[#0AAFC0]">
                     Rentabilidade total:
                   </p>
-                  <p className="text-[#2B6CB0] font-bold">
+                  <p className="text-[#0AAFC0] font-bold">
                     {rentabilidade.toFixed(2)}%
                   </p>
                 </div>
@@ -75,5 +75,6 @@ export default function Aplicacoes() {
     </NavbarLayout>
   );
 }
+
 
 
