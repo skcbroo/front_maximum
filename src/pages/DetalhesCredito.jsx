@@ -154,7 +154,7 @@ export default function DetalhesAplicacao() {
           {/* === GRÁFICO DE PROJEÇÃO === */}
           <div className="mt-6">
             <h2 className="text-lg font-semibold text-center text-[#1A202C] mb-3">
-              Projeção de Rendimentos (mensal)
+              Projeção de Rendimentos
             </h2>
             <div className="bg-white rounded-lg p-3 border border-[#CBD5E1]">
               <Line data={data} options={options} height={150} />
@@ -209,5 +209,6 @@ export default function DetalhesAplicacao() {
     </NavbarLayout>
   );
 }
+
 
 
