@@ -23,7 +23,7 @@ export default function Aplicacoes() {
         {produtos.map((p) => (
           <div
             key={p.id}
-            className="block bg-[#EBF4FF] border border-[#CBD5E1] rounded-xl shadow-md hover:shadow-lg transition-all px-6 py-5 text-[#2D3748]"
+            className="block  bg-[#0AAFC0] border border-[#CBD5E1] rounded-xl shadow-md hover:shadow-lg transition-all px-6 py-5 text-[#2D3748]"
           >
             {/* Nome do produto */}
             <h3 className="text-xl font-bold text-[#1A202C] mb-2">
@@ -64,3 +64,4 @@ export default function Aplicacoes() {
     </NavbarLayout>
   );
 }
+
