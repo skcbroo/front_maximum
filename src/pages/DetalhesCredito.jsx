@@ -8,17 +8,10 @@ export default function DetalhesAplicacao() {
   const [produto, setProduto] = useState(null);
   const [aporte, setAporte] = useState(1000); // numérico interno
   const [aporteTexto, setAporteTexto] = useState("1.000,00"); // exibido formatado
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const numeroEmpresa = "5561935058737"; // WhatsApp
 
   useEffect(() => {
-    try {
-      setIsLoggedIn(!!localStorage.getItem("token"));
-    } catch (_) {
-      setIsLoggedIn(false);
-    }
-
     axios
       .get(`${import.meta.env.VITE_API_URL}/api/produtos/${id}`)
       .then((res) => setProduto(res.data))
@@ -60,9 +53,7 @@ export default function DetalhesAplicacao() {
       setAporteTexto("");
     } else {
       setAporte(numero);
-      setAporteTexto(
-        formatadorNumero.format(numero).replace(".", ",")
-      );
+      setAporteTexto(formatadorNumero.format(numero).replace(".", ","));
     }
   };
 
@@ -131,27 +122,12 @@ export default function DetalhesAplicacao() {
             </p>
           </div>
 
-          {isLoggedIn ? (
-            <button
-              onClick={confirmarSimulacao}
-              className="w-full px-6 py-2 rounded-lg bg-[#0AAFC0] text-white hover:brightness-110 transition font-medium"
-            >
-              Aplicar agora
-            </button>
-          ) : (
-            <div className="text-sm text-[#1A202C] bg-white/70 border border-[#CBD5E1] rounded-lg p-3 text-center">
-              Para aplicar nesta oportunidade, entre em contato{" "}
-              <a
-                href={`https://wa.me/${numeroEmpresa}`}
-                target="_blank"
-                rel="noreferrer"
-                className="underline text-[#2B6CB0] hover:text-[#1A4E86] font-semibold"
-              >
-                pelo WhatsApp
-              </a>
-              .
-            </div>
-          )}
+          <button
+            onClick={confirmarSimulacao}
+            className="w-full px-6 py-2 rounded-lg bg-[#0AAFC0] text-white hover:brightness-110 transition font-medium"
+          >
+            Aplicar agora
+          </button>
         </div>
       </div>
     </NavbarLayout>
