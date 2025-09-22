@@ -2,12 +2,12 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import NavbarLayout from "../components/Navbar";
 import axios from "axios";
-//
+
 export default function DetalhesAplicacao() {
   const { id } = useParams();
   const [produto, setProduto] = useState(null);
   const [aporte, setAporte] = useState(1000); // numérico interno
-  const [aporteTexto, setAporteTexto] = useState("1.000,00"); // exibido formatado
+  const [aporteTexto, setAporteTexto] = useState("1.000,00"); // exibido no input
 
   const numeroEmpresa = "5561935058737"; // WhatsApp
 
@@ -45,6 +45,7 @@ export default function DetalhesAplicacao() {
   });
 
   const handleAporteChange = (e) => {
+    // pega só números e vírgula
     let valor = e.target.value.replace(/\./g, "").replace(",", ".");
     let numero = parseFloat(valor);
 
@@ -53,7 +54,16 @@ export default function DetalhesAplicacao() {
       setAporteTexto("");
     } else {
       setAporte(numero);
-      setAporteTexto(formatadorNumero.format(numero).replace(".", ","));
+      setAporteTexto(e.target.value); // mantém enquanto digita
+    }
+  };
+
+  const handleAporteBlur = () => {
+    // ao sair do input, formata para padrão BR
+    if (!isNaN(aporte) && aporte > 0) {
+      setAporteTexto(formatadorNumero.format(aporte).replace(".", ","));
+    } else {
+      setAporteTexto("0,00");
     }
   };
 
@@ -114,6 +124,7 @@ export default function DetalhesAplicacao() {
               type="text"
               value={aporteTexto}
               onChange={handleAporteChange}
+              onBlur={handleAporteBlur}
               className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <p className="text-sm text-gray-800">
@@ -133,6 +144,3 @@ export default function DetalhesAplicacao() {
     </NavbarLayout>
   );
 }
-
-
-
