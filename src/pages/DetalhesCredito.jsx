@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import NavbarLayout from "../components/Navbar";
 import axios from "axios";
-//
+
 export default function DetalhesAplicacao() {
   const { id } = useParams();
   const [produto, setProduto] = useState(null);
@@ -133,4 +133,5 @@ export default function DetalhesAplicacao() {
     </NavbarLayout>
   );
 }
+
 
