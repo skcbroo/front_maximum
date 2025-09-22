@@ -29,7 +29,7 @@ export default function Aplicacoes() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto select-none cursor-default">
         {produtos.map((p) => {
           const fator = Math.pow(1 + p.taxaMensal, p.prazoMeses);
-          const rentabilidade = (fator - 1) * 100;
+          const rentabilidade = p.taxaMensal * p.prazoMeses * 100;
 
           return (
             <a
@@ -73,3 +73,4 @@ export default function Aplicacoes() {
     </NavbarLayout>
   );
 }
+
