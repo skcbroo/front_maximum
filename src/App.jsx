@@ -30,7 +30,7 @@ function App() {
                 <Route path="/admin/creditos" element={<AdminCreditos />} />
                 <Route path="/admin/usuarios" element={<AdminUsuarios />} />
                 <Route path="/admin/dashboard" element={<AdminDashboard />} />
-                <Route path="/produto/:id" element={<DetalhesCredito />} /> 
+                <Route path="/aplicacoes/:id" element={<DetalhesCredito />} /> 
                 <Route path="/minhas-aplicacoes" element={<MeusAtivos />} />
                 <Route path="/admin/cotas" element={<AdminCotas />} />
                 <Route path="/verificar-email/:token" element={<VerificarEmail />} />
@@ -41,6 +41,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
