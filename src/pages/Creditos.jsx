@@ -35,7 +35,7 @@ export default function Aplicacoes() {
             <a
               href={`/aplicacoes/${p.id}`}
               key={p.id}
-              className="block bg-[#EBF4FF] border border-[#CBD5E1] rounded-xl shadow-md hover:shadow-lg transition-all px-6 py-5 text-[#2D3748]"
+              className="block bg-[#EBF4FF] border border-[#CBD5E1] rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition transform px-6 py-5 text-[#2D3748]"
             >
               <div className="flex items-center gap-2 mb-3">
                 {iconMap[p.nome] || (
@@ -75,6 +75,7 @@ export default function Aplicacoes() {
     </NavbarLayout>
   );
 }
+
 
 
 
