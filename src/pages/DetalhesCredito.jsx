@@ -157,7 +157,7 @@ export default function DetalhesAplicacao() {
               Projeção de Rendimentos (mensal)
             </h2>
             <div className="bg-white rounded-lg p-3 border border-[#CBD5E1]">
-              <Line data={data} options={options} height={300} />
+              <Line data={data} options={options} height={150} />
             </div>
           </div>
 
@@ -209,3 +209,4 @@ export default function DetalhesAplicacao() {
     </NavbarLayout>
   );
 }
+
