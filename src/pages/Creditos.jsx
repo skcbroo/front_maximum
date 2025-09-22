@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import NavbarLayout from "../components/Navbar";
 import { ShieldCheck, Zap, TrendingUp } from "lucide-react";
-
+//
 export default function Aplicacoes() {
   const [produtos, setProdutos] = useState([]);
 
@@ -75,3 +75,4 @@ export default function Aplicacoes() {
     </NavbarLayout>
   );
 }
+
