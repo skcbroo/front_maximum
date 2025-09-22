@@ -15,9 +15,9 @@ export default function Aplicacoes() {
   }, []);
 
   const iconMap = {
-    "Renda Plus": <ShieldCheck className="w-6 h-6 text-[#2B6CB0]" />,
-    "Renda Fast": <Zap className="w-6 h-6 text-[#2B6CB0]" />,
-    "Renda Max": <TrendingUp className="w-6 h-6 text-[#2B6CB0]" />,
+    "Renda Plus": <ShieldCheck className="w-6 h-6 text-[#0AAFC0]" />,
+    "Renda Fast": <Zap className="w-6 h-6 text-[#0AAFC0]" />,
+    "Renda Max": <TrendingUp className="w-6 h-6 text-[#0AAFC0]" />,
   };
 
   return (
@@ -60,7 +60,7 @@ export default function Aplicacoes() {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#2B6CB0]">
+                  <p className="font-semibold text-[#0AAFC0]">
                     Rentabilidade total:
                   </p>
                   <p className="text-[#2B6CB0] font-bold">
@@ -75,4 +75,5 @@ export default function Aplicacoes() {
     </NavbarLayout>
   );
 }
+
 
