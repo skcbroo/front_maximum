@@ -128,7 +128,7 @@ export default function GraficoRetorno() {
         borderRadius: "1rem",
         padding: "1rem",
         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.05)",
-        height: "500px",
+        height: "250px",
       }}
     >
       <Line data={data} options={options} />
