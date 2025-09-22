@@ -28,7 +28,7 @@ export default function Aplicacoes() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto select-none cursor-default">
         {produtos.map((p) => {
-          const fator = Math.pow(1 + p.taxaMensal, p.prazoMeses);
+          // ✅ Juros simples: taxaMensal * prazoMeses
           const rentabilidade = p.taxaMensal * p.prazoMeses * 100;
 
           return (
@@ -38,7 +38,9 @@ export default function Aplicacoes() {
               className="block bg-[#EBF4FF] border border-[#CBD5E1] rounded-xl shadow-md hover:shadow-lg transition-all px-6 py-5 text-[#2D3748]"
             >
               <div className="flex items-center gap-2 mb-3">
-                {iconMap[p.nome] || <ShieldCheck className="w-6 h-6 text-[#2B6CB0]" />}
+                {iconMap[p.nome] || (
+                  <ShieldCheck className="w-6 h-6 text-[#2B6CB0]" />
+                )}
                 <h3 className="text-xl font-bold text-[#1A202C]">{p.nome}</h3>
               </div>
 
@@ -73,4 +75,3 @@ export default function Aplicacoes() {
     </NavbarLayout>
   );
 }
-
