@@ -7,7 +7,7 @@ export default function DetalhesAplicacao() {
   const { id } = useParams();
   const [produto, setProduto] = useState(null);
   const [aporte, setAporte] = useState(1000); // numérico interno
-  const [aporteTexto, setAporteTexto] = useState("1.000,00"); // exibido no input
+  const [aporteTexto, setAporteTexto] = useState("10.000,00"); // exibido no input
 
   const numeroEmpresa = "5561935058737"; // WhatsApp
 
@@ -161,5 +161,6 @@ export default function DetalhesAplicacao() {
     </NavbarLayout>
   );
 }
+
 
 
