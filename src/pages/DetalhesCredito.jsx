@@ -114,7 +114,7 @@ export default function DetalhesAplicacao() {
           {isLoggedIn ? (
             <button
               onClick={confirmarSimulacao}
-              className="w-full px-6 py-2 rounded-lg bg-[#1D2533] text-white hover:brightness-110 transition font-medium"
+              className="w-full px-6 py-2 rounded-lg bg-[#0AAFC0] text-white hover:brightness-110 transition font-medium"
             >
               Aplicar agora
             </button>
@@ -137,3 +137,4 @@ export default function DetalhesAplicacao() {
     </NavbarLayout>
   );
 }
+
