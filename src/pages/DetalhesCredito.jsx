@@ -115,23 +115,40 @@ export default function DetalhesAplicacao() {
 
           <hr className="my-4 border-t border-gray-300" />
 
-          <div className="space-y-2">
-            <label className="font-medium block" htmlFor="aporte">
-              Simular aporte (R$)
-            </label>
-            <input
-              id="aporte"
-              type="text"
-              value={aporteTexto}
-              onChange={handleAporteChange}
-              onBlur={handleAporteBlur}
-              className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <p className="text-sm text-gray-800">
-              Valor final projetado:{" "}
-              <strong>{formatador.format(valorFinal)}</strong>
-            </p>
-          </div>
+         <div className="space-y-2">
+  <label className="font-medium block" htmlFor="aporte">
+    Simular aporte (R$)
+  </label>
+  <input
+    id="aporte"
+    type="text"
+    value={aporteTexto}
+    onChange={(e) => {
+      let valor = e.target.value.replace(/\D/g, ""); // remove tudo que não for número
+      let numero = parseFloat(valor) / 100; // volta para decimal
+      if (isNaN(numero)) numero = 0;
+
+      setAporte(numero);
+      setAporteTexto(
+        numero.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })
+      );
+    }}
+    className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+  <p className="text-sm text-gray-800">
+    Valor final projetado:{" "}
+    <strong>
+      {valorFinal.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      })}
+    </strong>
+  </p>
+</div>
+
 
           <button
             onClick={confirmarSimulacao}
@@ -144,4 +161,5 @@ export default function DetalhesAplicacao() {
     </NavbarLayout>
   );
 }
+
 
