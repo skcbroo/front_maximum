@@ -39,7 +39,7 @@ export default function Aplicacoes() {
             >
               <div className="flex items-center gap-2 mb-3">
                 {iconMap[p.nome] || (
-                  <ShieldCheck className="w-6 h-6 text-[#2B6CB0]" />
+                  <ShieldCheck className="w-6 h-6 text-[#0AAFC0]" />
                 )}
                 <h3 className="text-xl font-bold text-[#1A202C]">{p.nome}</h3>
               </div>
@@ -75,6 +75,7 @@ export default function Aplicacoes() {
     </NavbarLayout>
   );
 }
+
 
 
 
